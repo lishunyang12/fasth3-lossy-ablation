@@ -1,24 +1,11 @@
-# FastH3 原版：四项单独有损消融
+# FastH3 有损消融与 DiT O projection BF16 回退
 
-用户最终要求为 7 个 prompt × 5 个版本 = 35 个视频，每个版本一条视频；同一 prompt 统一 seed 1101。
+沿用原页面七组完整 prompt、seed 1101、1280×704、24 fps、四次 DiT、相同上游完整 checkpoint 与运行配置。原有五列和 35 段 MP4 保持字节不变；每组末尾追加「DiT MXFP8 · O BF16」。
 
-共同基线是 FastVideo 上游 commit `3196835913ce9e97b23888b32643a1207cc5ee70`，官方完整 FastH3 VSA-DataFree checkpoint revision `b65818d41939b5085451074fe8ca8b799f8d4921`。不使用之前的 vLLM-Omni 重实现、融合 LoRA 或通信调度优化。复用已经验证的原版源码；唯一共同兼容修改是输入校验允许 362 帧，以满足 15 秒的 VAE 帧数对齐，原版编码和混流逻辑不改。
+新增列以页面的 DiT MXFP8 为对照，仅将每个 DiT block 的 attention `to_out` / `proj_o` 恢复为原始 BF16。50 层的 Q/K/V 与 FFN input/output 合计 250 个投影继续使用原来 MXFP8 方法，50 个 O projection 调用原始 UnquantizedLinearMethod。权重来自原始 BF16 checkpoint，不是量化后反量化。没有加入 Sage、VAE NVFP4 或最快组合链路的其他改动。
 
-共同配置：1280×704，24 fps，362 输入帧，5 个 sigma 网格点（4 次 DiT），seed 1101，原版 `all` profile，Triton VSA tile64 / sparsity0.9，FA4 关闭，8 卡 SP+FSDP、TP1，原版 NCCL all-to-all，原版并行 VAE gather 及 VAE 编译。原版在当前 GPU 上自行禁用不兼容的 DiT regional compile；五组一致。所有组使用同一 Python/Torch/CUDA 运行环境。
+每个请求、每个 rank 都验证 4 次 DiT、250 个 MXFP8 投影各 4 次以及 50 个 BF16 O 各 4 次，新增 56 份调用审计通过。所有 42 条视频完整解码通过，均 361 帧。输入仍为 VAE 对齐的 362 帧，原版混流输出处理保持一致。
 
-| 版本 | 唯一有损变量 |
-|---|---|
-| original | 无：原版 |
-| dit_mxfp8 | 50 个 DiT block 的 Q/K/V/O 和两层 FF，共 300 个独立投影，A8W8 MXFP8 |
-| sage_attention | VSA fine sparse attention 的 QK INT8、PV FP8 |
-| vae_mxfp8 | 36 个视频 VAE decoder block 的 Q/K/V/O 和两层 FF，共 216 个独立投影，A8W8 MXFP8 |
-| vae_nvfp4 | 同样的 216 个视频 VAE decoder 投影，A4W4 NVFP4 |
+所有有损版本补充对 Original 的 PSNR / SSIM：完整 361 帧，相同时间戳，不缩放、不裁剪、不搜索偏移。使用解码 MP4 的 8-bit YUV420p，因此含编码影响。生成轨迹变化会降低像素指标，分数不直接代表主观质量。逐片 PSNR 为全视频加权 MSE 的 dB 转换，SSIM 为 FFmpeg All；汇总表为 7 个 case 分数的算术平均。参见 metrics-summary.json、metrics.csv、METRICS.zh.md 和 metrics-per-frame.zip。
 
-DiT 保留原版 BF16 FSDP 参数、分片和通信，收到未分片权重后再量化该次 GEMM，不融合 QKV、不改 gate/AdaLN、refiner、输入输出投影。VAE 从原版 FP32 权重量化，保持 FP16 autocast 的输入输出边界，保留原来的分开 Q/K/V、attention、卷积、norm、激活、空间分块、时间分块和音频 VAE。Sage 保留原版的 mask、稀疏度、pooling、coarse、gate 与通信，只替换 fine kernel。
-
-量化适配器位于实验目录，通过 Python 启动时安装，原版源码和模型文件不改。逐 rank 审计实际调用数量，并记录 VAE 输入 latent 哈希，检验两组 VAE 消融的上游输入与原版一致。`qualification.json` 记录真实 GPU GEMM、Sage ragged mask 与编译 VAE 接口的数值检查；这不是视频质量结论。
-
-`prompts/` 保存用户提供的完整文本，仅补全第 3、5、7 个 prompt 字段名缺失的首字母 i，移除组号标签，没有 padding 或截断。`manifest.json` 保存 prompt 哈希和共同参数。
-
-运行：先执行 `qualify.py`，通过后执行 `python -B run_all.py`。各组产物在 `runs/<arm>/`；日志、调用审计与最终视频分开保存。首个请求含编译，各组计时仅供运行记录，不能当作纯量化性能基准。
-
+原有 ZIP 仍是标注的 35 段历史发布；新视频可从各卡片直接下载。原版计时包含首次编译，不将这些消融样片的运行时间当作实时性能结论。

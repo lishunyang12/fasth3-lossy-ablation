@@ -1,5 +1,5 @@
 {
-  "status": "PREPARING",
+  "status": "READY",
   "upstream_commit": "3196835913ce9e97b23888b32643a1207cc5ee70",
   "checkpoint": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
   "checkpoint_revision": "b65818d41939b5085451074fe8ca8b799f8d4921",
@@ -24,18 +24,8 @@
     "source_compatibility_patch": "Only duration validation permits 362 VAE-aligned frames; applied equally to all arms."
   },
   "arms": {
-    "original": [],
-    "dit_mxfp8": [
-      "DiT transformer block Q, K, V, O, FF input and FF output GEMMs: MXFP8 A8W8 only; retain original BF16 FSDP parameters and communication"
-    ],
-    "sage_attention": [
-      "VSA fine sparse attention: Sage QK INT8 / PV FP8 only; original pooling, masks, coarse branch, gate and collectives"
-    ],
-    "vae_mxfp8": [
-      "Video VAE decoder block Q, K, V, O, FF input and FF output GEMMs: MXFP8 A8W8 only"
-    ],
-    "vae_nvfp4": [
-      "Same video VAE decoder GEMMs: NVFP4 A4W4 only"
+    "dit_mxfp8_o_bf16": [
+      "Relative to the page DiT MXFP8 arm: retain original BF16 attention to_out in all 50 blocks; Q/K/V and FF input/output retain the identical MXFP8 implementation."
     ]
   },
   "prompts": [
@@ -75,8 +65,8 @@
       "sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d"
     }
   ],
-  "videos_per_prompt": 5,
-  "total_videos": 35,
+  "videos_per_prompt": 1,
+  "total_videos": 7,
   "normalization": "Only add missing leading i in integrated_multimodal_description for prompts 03, 05, 07; remove user group labels; no padding, truncation or prompt rewriting.",
   "mxfp8_producer_source_sha256": "f29f83d8b5939164eaf056750807098dba9dcd20bb40db4c1d16c86ffff68862",
   "excluded_prior_optimizations": [
@@ -88,5 +78,14 @@
     "VAE mixed batching",
     "VAE early gather",
     "Green Contexts"
-  ]
+  ],
+  "control_arm": "dit_mxfp8",
+  "comparison_reference": "original",
+  "parent_runtime_sha256": {
+    "ablation_runtime.py": "2995c031af98079670f6b708169e90edc51ae9d4f258eaa1c85bc3e4090d303b",
+    "mxfp8_producer.py": "600eca85414913a89416ef35b4bc0dc51564acd5d63d98028f0fc03696b6f819",
+    "run_arm.py": "4737707fb19f08c3ff63e38683df95e0e65d434517acd30679ff46fbb82115eb",
+    "launch_arm.py": "fc82ad4a5228be221d2da041be7cbf9286168074bd57badb9c0cb95bf906ae97",
+    "manifest.json": "2d87a914cc929f8827bc7517b71fbb4fde474b9457575795feed1e79ea1d0759"
+  }
 }

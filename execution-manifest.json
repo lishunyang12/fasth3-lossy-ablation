@@ -1,5 +1,5 @@
 {
-  "status": "COMPLETE",
+  "status": "VALIDATED",
   "upstream_commit": "3196835913ce9e97b23888b32643a1207cc5ee70",
   "checkpoint": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
   "checkpoint_revision": "b65818d41939b5085451074fe8ca8b799f8d4921",
@@ -36,6 +36,9 @@
     ],
     "vae_nvfp4": [
       "Same video VAE decoder GEMMs: NVFP4 A4W4 only"
+    ],
+    "dit_mxfp8_o_bf16": [
+      "Relative to the page DiT MXFP8 arm: retain original BF16 attention to_out in all 50 blocks; Q/K/V and FF input/output retain the identical MXFP8 implementation."
     ]
   },
   "prompts": [
@@ -75,8 +78,8 @@
       "sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d"
     }
   ],
-  "videos_per_prompt": 5,
-  "total_videos": 35,
+  "videos_per_prompt": 6,
+  "total_videos": 42,
   "normalization": "Only add missing leading i in integrated_multimodal_description for prompts 03, 05, 07; remove user group labels; no padding, truncation or prompt rewriting.",
   "mxfp8_producer_source_sha256": "f29f83d8b5939164eaf056750807098dba9dcd20bb40db4c1d16c86ffff68862",
   "excluded_prior_optimizations": [
@@ -91,5 +94,8 @@
   ],
   "validated_videos": 35,
   "frozen_input_plan": "manifest.json",
-  "validation_file": "validation.json"
+  "validation_file": "validation.json",
+  "extension_date": "2026-09-18",
+  "extension_control": "dit_mxfp8",
+  "extension_only_change": "50 attention O projections restored from MXFP8 to original BF16; Q/K/V and FFN remain MXFP8; no Sage or VAE quantization added."
 }
