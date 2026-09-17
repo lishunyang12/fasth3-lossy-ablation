@@ -48,3 +48,17 @@ prompt,arm,frames,PSNR_YUV_dB,PSNR_Y_dB,SSIM_All,SSIM_Y
 05-ronin-void,dit_mxfp8_qkvo_bf16,361,19.739996,18.084767,0.752248,0.670814
 06-anime-maid-livestream,dit_mxfp8_qkvo_bf16,361,15.824569,14.173288,0.430607,0.285339
 07-ninja-obstacle-course,dit_mxfp8_qkvo_bf16,361,16.522738,15.074045,0.512928,0.435447
+01-moon-teahouse,dit_mxfp8_first_step_original,361,20.503131,18.821217,0.718627,0.626215
+02-dachshund-skatepark,dit_mxfp8_first_step_original,361,18.827257,17.135169,0.668694,0.565205
+03-attic-rain,dit_mxfp8_first_step_original,361,21.332985,19.663649,0.70435,0.607863
+04-doorway-worlds,dit_mxfp8_first_step_original,361,20.275792,18.639468,0.702121,0.615718
+05-ronin-void,dit_mxfp8_first_step_original,361,21.270462,19.619192,0.781632,0.70966
+06-anime-maid-livestream,dit_mxfp8_first_step_original,361,17.824745,16.1731,0.523906,0.394262
+07-ninja-obstacle-course,dit_mxfp8_first_step_original,361,18.245816,16.740316,0.577219,0.498056
+01-moon-teahouse,sage_first_step_original,361,22.075073,20.393653,0.770221,0.693389
+02-dachshund-skatepark,sage_first_step_original,361,22.65233,20.961836,0.78235,0.708435
+03-attic-rain,sage_first_step_original,361,24.213308,22.536137,0.792574,0.720357
+04-doorway-worlds,sage_first_step_original,361,23.151614,21.51543,0.803147,0.74199
+05-ronin-void,sage_first_step_original,361,25.061602,23.397516,0.855327,0.804897
+06-anime-maid-livestream,sage_first_step_original,361,20.314685,18.659413,0.645971,0.539309
+07-ninja-obstacle-course,sage_first_step_original,361,20.342464,18.836449,0.663122,0.591815

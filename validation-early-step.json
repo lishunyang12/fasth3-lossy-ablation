@@ -1,0 +1,607 @@
+{
+  "status": "PASS",
+  "videos": 14,
+  "rank_request_audits": 112,
+  "control_config_equal": true,
+  "source_unchanged": true,
+  "lossy_kernels_unchanged": true,
+  "first_step_inputs_and_velocities_match_between_arms": true,
+  "first_step_digests": [
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c4e540f8299bbe27ee5eb19e0659796c733eca4f770907841c470b1fb28a3de3",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1f3dd78aa6fd47168dd37e2f4149988d637a821527da47123cb3064e58d9fba3",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dbfec35ca26dc806b4bfc9694485d4b3e97dd0ccc72c1eed486436935ae65c6f",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e1f22994e27ade37432ef61cfe0d50bfc276ff4c77c4754c7b763594a7ca65f6",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fc144a1b74a004a9c3fe0abc4e7016f287a20115c043bdc5c2b6f128393ca82b",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3d934fa44798e1faf3f6553a4dc5d5f88638964d84ba4d1f769ef1e9b35169da",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "69421174b751d32de7822798e10d2f2fd7285d66abc14edfcc1e6e7d7a7ff3aa",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2ab88d004f01712bbf0acc321f9d51e0fe81815dd95438d8ebc13f8722e1791f",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a7edda80a6c6280d2e6372b3463e07c5d87d85ed2d30044877a2be4a4bd005ac",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1e8fa07d3e2f1f96c5a063ab333605ee1e0e975f5f352cbb2ccecc7521f29d05",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f2b5bf481093a6cf4f1cc9f7cffe5abec86616bf931e458793c3d5457b492e7e",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dc87147d1fbb5da2032927240d0e0f3d2d13df2678d7722b383adbef52c196ed",
+        "finite": true
+      }
+    },
+    {
+      "hidden_states": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16b0be57006f34655cc5d3fc2894153040fb827fee8ed4996fd3495a54a71069",
+        "finite": true
+      },
+      "audio_hidden_states": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb876a650c638523c8b1963f9b4e154e3796c1108c9f53b16f2d7bc297f9efa",
+        "finite": true
+      },
+      "video_velocity": {
+        "shape": [
+          1,
+          94160,
+          96
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f25f7ca3059ef12318aed10ee7c89b3175de42e7a123b3a5bbc58c0117801ef2",
+        "finite": true
+      },
+      "audio_velocity": {
+        "shape": [
+          1,
+          1206,
+          32
+        ],
+        "dtype": "torch.float32",
+        "sha256": "161b7cb60ad7d3cc00385400b65275cfe17b0d86296bce8273a4c93ee2cfe97b",
+        "finite": true
+      }
+    }
+  ],
+  "schedule": {
+    "original_forward_indices": [
+      0
+    ],
+    "lossy_forward_indices": [
+      1,
+      2,
+      3
+    ],
+    "original_forward_fraction": 0.25,
+    "lossy_forward_fraction": 0.75,
+    "user_requested_fraction": 0.1,
+    "granularity_note": "Four actual DiT forwards. First full denoising step is 25% by forward count, not 10%; sampling schedule unchanged."
+  },
+  "benchmark_barriers": {
+    "dit_mxfp8_first_step_original": {
+      "status": "PASS",
+      "measured_samples": 59,
+      "measured_foreign": 0,
+      "preparation_interference_count": 0,
+      "ready_sha256": "9dd3d478e98a679f125dcb01f9e7d16cfc750bae2a08b8f5401580ad194923b7",
+      "release_sha256": "86b658a395e69a6825cd632f3781ed803739d8b6dc10069eaf78d86715e68114",
+      "model_load_wait_excluded_from_request_timing": true
+    },
+    "sage_first_step_original": {
+      "status": "PASS",
+      "measured_samples": 60,
+      "measured_foreign": 0,
+      "preparation_interference_count": 0,
+      "ready_sha256": "b72bc06d2be48862ddf1d151c3c26021eecfd7896da9e2f2a8a5f73051deff88",
+      "release_sha256": "f1251271b91ca0d9f9bf83e22309d8ead4c58380422e821d46ebabd19d756da6",
+      "model_load_wait_excluded_from_request_timing": true
+    }
+  },
+  "items": [
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "01-moon-teahouse",
+      "prompt_sha256": "42f62c2ecb9f90880041d51d3fa38fa6c236945ba80b6a862e080151824a50c2",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/01-moon-teahouse__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 51.330385604989715,
+      "denoise_s": 27.446121116983704,
+      "first_request_includes_compile": true,
+      "bytes": 13246739,
+      "sha256": "b91c5431373f7878101f105a6da4d1cbe710b8ab401497b33ffb476f6bf4b0da",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=5dbc134b6432f7c5a58252660f7c6b4faa72aca537d2efa124d0915137f9b7db",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "02-dachshund-skatepark",
+      "prompt_sha256": "e846f0f20adfe498df2b500ac9db60e2efcfeda3cac51233e217fd407e7be5d4",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/02-dachshund-skatepark__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 44.17494466796052,
+      "denoise_s": 27.188007329008542,
+      "first_request_includes_compile": false,
+      "bytes": 17746525,
+      "sha256": "b75656976c740996d7d791ae02c3bbbd7a66b58da31b6212b2ace8efa3e37168",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=d1d730e6783897ef5bf90c140bdfaf4b473096bec7d87bd10a2aecb0d83c8935",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "03-attic-rain",
+      "prompt_sha256": "1db2772283d9ef939bc13d33a4761ca4e994ce6db28416201a8876f5a37b5745",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/03-attic-rain__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 44.29846872598864,
+      "denoise_s": 27.607623051968403,
+      "first_request_includes_compile": false,
+      "bytes": 13355154,
+      "sha256": "f3901ec8aca99727e5d8bd3a2686454d163ebd3365eb366f01902f33cdf9ef37",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=7bc41d9e9daaec378f2e62b05c360cf3a3925cded8e6548257e963557e271316",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "04-doorway-worlds",
+      "prompt_sha256": "a5cc21ebede61549ce0ecea35afbc179cb2641786f390871e57c988f2b9a5870",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/04-doorway-worlds__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 39.955800547031686,
+      "denoise_s": 23.357081233989447,
+      "first_request_includes_compile": false,
+      "bytes": 12984120,
+      "sha256": "a190cf352212997fcafb422b541c6efaff0e74ab746a324c9afebde06682da88",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=d334d9991d09f09989b8876534f3e4b43b83d9f8596fac61c37b4aa1ceb1c92e",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "05-ronin-void",
+      "prompt_sha256": "eac5ccdc6053a0e44bea5d3db9b0d5d61d772c313db0c8b24d920bd43e5e3b5d",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/05-ronin-void__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 40.23667019396089,
+      "denoise_s": 23.590788429020904,
+      "first_request_includes_compile": false,
+      "bytes": 11702565,
+      "sha256": "27298019ec6e45196d98df857823f23d40b62d075528efd23f3954bdc5dd797f",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=cab9f2657edb6ba242a7884b7c81adc84822121600d3a7176adcfd4ca49b736c",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "06-anime-maid-livestream",
+      "prompt_sha256": "3122f5ba4d70acc756ddeeec87b3dd9cafdcba52bca79ae733e807ae66a248c3",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/06-anime-maid-livestream__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 40.04656622605398,
+      "denoise_s": 23.358720983960666,
+      "first_request_includes_compile": false,
+      "bytes": 20550262,
+      "sha256": "20cb50b063836a4275710b8fc8caae3a1fcbd6b8b58ef2690f6552de39dca90b",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=a74bcad031ef4dc5f99d2c11e42b9a83b6fa2b72c71abddbab498b2bc3681a00",
+      "decode": "PASS"
+    },
+    {
+      "arm": "dit_mxfp8_first_step_original",
+      "prompt": "07-ninja-obstacle-course",
+      "prompt_sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d",
+      "seed": 1101,
+      "video": "runs/dit_mxfp8_first_step_original/07-ninja-obstacle-course__dit_mxfp8_first_step_original__seed1101.mp4",
+      "wall_s": 44.4825628149556,
+      "denoise_s": 27.590141993947327,
+      "first_request_includes_compile": false,
+      "bytes": 19626974,
+      "sha256": "d5d8fc66f4d4cb2fb1210f9ee2ab4cce4164b951517b1893d73b90cc99bdd520",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=58d4a9438002df0269f8834facece1a8c1af87155941a1f121b48f49689c0249",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "01-moon-teahouse",
+      "prompt_sha256": "42f62c2ecb9f90880041d51d3fa38fa6c236945ba80b6a862e080151824a50c2",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/01-moon-teahouse__sage_first_step_original__seed1101.mp4",
+      "wall_s": 55.90744691505097,
+      "denoise_s": 32.16271170496475,
+      "first_request_includes_compile": true,
+      "bytes": 12997836,
+      "sha256": "749f91e14af202314603557317d0c6e02b70200534a712ba9187643b013a7867",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=4c6b96061c19fadf417fdfa63d51862abb90fddd6ee9872d06c258849420cc27",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "02-dachshund-skatepark",
+      "prompt_sha256": "e846f0f20adfe498df2b500ac9db60e2efcfeda3cac51233e217fd407e7be5d4",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/02-dachshund-skatepark__sage_first_step_original__seed1101.mp4",
+      "wall_s": 44.339857072918676,
+      "denoise_s": 27.23044806800317,
+      "first_request_includes_compile": false,
+      "bytes": 17653327,
+      "sha256": "c6ff065ffee121df42a8d48d2ae649e940ad5f29bcb7696c696f016588caecf6",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=0bd47aa647f7fa2c0d56d561891b5e3e5fcb40c6b181f73e2e72eaaff35cfbd6",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "03-attic-rain",
+      "prompt_sha256": "1db2772283d9ef939bc13d33a4761ca4e994ce6db28416201a8876f5a37b5745",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/03-attic-rain__sage_first_step_original__seed1101.mp4",
+      "wall_s": 44.55054842599202,
+      "denoise_s": 27.434320806059986,
+      "first_request_includes_compile": false,
+      "bytes": 13031480,
+      "sha256": "b32f07cfd9a71e6c45455991c8486c2907ad96c4d199994d74b7cf3cc21a6564",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=55eb90daa166fc1d43f20e8a93eed24066f90fe23a168a21e4ead1d59d64bf86",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "04-doorway-worlds",
+      "prompt_sha256": "a5cc21ebede61549ce0ecea35afbc179cb2641786f390871e57c988f2b9a5870",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/04-doorway-worlds__sage_first_step_original__seed1101.mp4",
+      "wall_s": 40.107239246950485,
+      "denoise_s": 23.134076717076823,
+      "first_request_includes_compile": false,
+      "bytes": 12614355,
+      "sha256": "70a8590c8419a0d23282167b114d1ebd25bfbadd5280404ed4cd86626137728e",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=fb13b7d0b220c69a6174004e1554a991c00bfc81001767bd9e8e60be63e475b1",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "05-ronin-void",
+      "prompt_sha256": "eac5ccdc6053a0e44bea5d3db9b0d5d61d772c313db0c8b24d920bd43e5e3b5d",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/05-ronin-void__sage_first_step_original__seed1101.mp4",
+      "wall_s": 40.15991012903396,
+      "denoise_s": 23.24217017798219,
+      "first_request_includes_compile": false,
+      "bytes": 11619794,
+      "sha256": "4aa32ab50a1e8bc32e4685a99d3ed4818c075dec8d9299786624cae8ff3f763d",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=028aadc737c19f6d2a2d5c7e58aad0448fc52af0a4f114bf4d3c31c81a17f2fa",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "06-anime-maid-livestream",
+      "prompt_sha256": "3122f5ba4d70acc756ddeeec87b3dd9cafdcba52bca79ae733e807ae66a248c3",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/06-anime-maid-livestream__sage_first_step_original__seed1101.mp4",
+      "wall_s": 39.97338711901102,
+      "denoise_s": 23.16741179395467,
+      "first_request_includes_compile": false,
+      "bytes": 20773808,
+      "sha256": "f591cccf6a40ae6b8bd17810cac1a626f8fccf0f48cf7d5caad896a99f0badda",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=f28093eda046159950f8c087907f3d9e297b8df9c54e89be2f1634d9893580e3",
+      "decode": "PASS"
+    },
+    {
+      "arm": "sage_first_step_original",
+      "prompt": "07-ninja-obstacle-course",
+      "prompt_sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d",
+      "seed": 1101,
+      "video": "runs/sage_first_step_original/07-ninja-obstacle-course__sage_first_step_original__seed1101.mp4",
+      "wall_s": 44.31882940500509,
+      "denoise_s": 27.43831223109737,
+      "first_request_includes_compile": false,
+      "bytes": 19106459,
+      "sha256": "c34dc7f99c81a1ff93f6b28478759a0fec7c154cc77598f2f15816e2fd9d7ae2",
+      "video_frames": 361,
+      "video_duration": "15.041667",
+      "container_duration": "15.075000",
+      "audio_sample_rate": "32000",
+      "audio_channels": 2,
+      "decoded_audio_hash": "SHA256=68054abf304fcdb7baf4d3231c35897cf156a55e788f28650c32210df92c5e55",
+      "decode": "PASS"
+    }
+  ]
+}

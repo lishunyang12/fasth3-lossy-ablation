@@ -42,6 +42,12 @@
     ],
     "dit_mxfp8_qkvo_bf16": [
       "Relative to DiT MXFP8 + BF16 O: also restore Q/K/V to original BF16. All 200 attention Q/K/V/O projections use original BF16; 100 FFN input/output projections retain the identical MXFP8 implementation."
+    ],
+    "dit_mxfp8_first_step_original": [
+      "First DiT denoising forward: all original BF16 projections. Last three forwards: all 300 DiT Q/K/V/O and FFN projections MXFP8, identical to the existing DiT MXFP8 control. VSA kernel remains original throughout."
+    ],
+    "sage_first_step_original": [
+      "First DiT denoising forward: original Triton VSA attention. Last three forwards: identical Sage Attention kernel to the existing Sage control. All DiT projections remain original BF16 throughout."
     ]
   },
   "prompts": [
@@ -81,8 +87,8 @@
       "sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d"
     }
   ],
-  "videos_per_prompt": 7,
-  "total_videos": 49,
+  "videos_per_prompt": 9,
+  "total_videos": 63,
   "normalization": "Only add missing leading i in integrated_multimodal_description for prompts 03, 05, 07; remove user group labels; no padding, truncation or prompt rewriting.",
   "mxfp8_producer_source_sha256": "f29f83d8b5939164eaf056750807098dba9dcd20bb40db4c1d16c86ffff68862",
   "excluded_prior_optimizations": [
@@ -99,6 +105,23 @@
   "frozen_input_plan": "manifest.json",
   "validation_file": "validation.json",
   "extension_date": "2026-09-18",
-  "extension_control": "dit_mxfp8_o_bf16",
-  "extension_only_change": "Add Q/K/V original BF16 to the accepted BF16 O arm: all 200 DiT attention projections BF16; only 100 FFN projections remain MXFP8; no Sage or VAE changes."
+  "extension_control": [
+    "dit_mxfp8",
+    "sage_attention"
+  ],
+  "extension_only_change": "For each method separately, use original operations on the first of four denoising forwards; use the existing lossy method on the final three. No sampling schedule, VAE, sparsity, projection scope, or checkpoint changes.",
+  "extension_schedule": {
+    "original_forward_indices": [
+      0
+    ],
+    "lossy_forward_indices": [
+      1,
+      2,
+      3
+    ],
+    "original_forward_fraction": 0.25,
+    "lossy_forward_fraction": 0.75,
+    "user_requested_fraction": 0.1,
+    "granularity_note": "Four actual DiT forwards. First full denoising step is 25% by forward count, not 10%; sampling schedule unchanged."
+  }
 }
