@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01-moon-teahouse",
+    "characters": 2027,
+    "prompt_tokens": 457,
+    "truncation": false
+  },
+  {
+    "id": "02-dachshund-skatepark",
+    "characters": 2794,
+    "prompt_tokens": 596,
+    "truncation": false
+  },
+  {
+    "id": "03-attic-rain",
+    "characters": 3506,
+    "prompt_tokens": 831,
+    "truncation": false
+  },
+  {
+    "id": "04-doorway-worlds",
+    "characters": 3171,
+    "prompt_tokens": 627,
+    "truncation": false
+  },
+  {
+    "id": "05-ronin-void",
+    "characters": 3823,
+    "prompt_tokens": 800,
+    "truncation": false
+  },
+  {
+    "id": "06-anime-maid-livestream",
+    "characters": 2945,
+    "prompt_tokens": 640,
+    "truncation": false
+  },
+  {
+    "id": "07-ninja-obstacle-course",
+    "characters": 4159,
+    "prompt_tokens": 881,
+    "truncation": false
+  }
+]

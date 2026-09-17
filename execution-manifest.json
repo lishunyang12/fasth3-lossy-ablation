@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETE",
+  "upstream_commit": "3196835913ce9e97b23888b32643a1207cc5ee70",
+  "checkpoint": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
+  "checkpoint_revision": "b65818d41939b5085451074fe8ca8b799f8d4921",
+  "common": {
+    "width": 1280,
+    "height": 704,
+    "num_frames": 362,
+    "fps": 24,
+    "sigma_grid_points": 5,
+    "dit_forwards": 4,
+    "seed": 1101,
+    "profile": "all",
+    "vsa_tile_size": 64,
+    "vsa_sparsity": 0.9,
+    "num_gpus": 8,
+    "fsdp": true,
+    "sp_size": 8,
+    "tp_size": 1,
+    "fa4": false,
+    "vae_compile": true,
+    "vae_parallel_decode": "gather",
+    "source_compatibility_patch": "Only duration validation permits 362 VAE-aligned frames; applied equally to all arms."
+  },
+  "arms": {
+    "original": [],
+    "dit_mxfp8": [
+      "DiT transformer block Q, K, V, O, FF input and FF output GEMMs: MXFP8 A8W8 only; retain original BF16 FSDP parameters and communication"
+    ],
+    "sage_attention": [
+      "VSA fine sparse attention: Sage QK INT8 / PV FP8 only; original pooling, masks, coarse branch, gate and collectives"
+    ],
+    "vae_mxfp8": [
+      "Video VAE decoder block Q, K, V, O, FF input and FF output GEMMs: MXFP8 A8W8 only"
+    ],
+    "vae_nvfp4": [
+      "Same video VAE decoder GEMMs: NVFP4 A4W4 only"
+    ]
+  },
+  "prompts": [
+    {
+      "id": "01-moon-teahouse",
+      "file": "prompts/01-moon-teahouse.txt",
+      "sha256": "42f62c2ecb9f90880041d51d3fa38fa6c236945ba80b6a862e080151824a50c2"
+    },
+    {
+      "id": "02-dachshund-skatepark",
+      "file": "prompts/02-dachshund-skatepark.txt",
+      "sha256": "e846f0f20adfe498df2b500ac9db60e2efcfeda3cac51233e217fd407e7be5d4"
+    },
+    {
+      "id": "03-attic-rain",
+      "file": "prompts/03-attic-rain.txt",
+      "sha256": "1db2772283d9ef939bc13d33a4761ca4e994ce6db28416201a8876f5a37b5745"
+    },
+    {
+      "id": "04-doorway-worlds",
+      "file": "prompts/04-doorway-worlds.txt",
+      "sha256": "a5cc21ebede61549ce0ecea35afbc179cb2641786f390871e57c988f2b9a5870"
+    },
+    {
+      "id": "05-ronin-void",
+      "file": "prompts/05-ronin-void.txt",
+      "sha256": "eac5ccdc6053a0e44bea5d3db9b0d5d61d772c313db0c8b24d920bd43e5e3b5d"
+    },
+    {
+      "id": "06-anime-maid-livestream",
+      "file": "prompts/06-anime-maid-livestream.txt",
+      "sha256": "3122f5ba4d70acc756ddeeec87b3dd9cafdcba52bca79ae733e807ae66a248c3"
+    },
+    {
+      "id": "07-ninja-obstacle-course",
+      "file": "prompts/07-ninja-obstacle-course.txt",
+      "sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d"
+    }
+  ],
+  "videos_per_prompt": 5,
+  "total_videos": 35,
+  "normalization": "Only add missing leading i in integrated_multimodal_description for prompts 03, 05, 07; remove user group labels; no padding, truncation or prompt rewriting.",
+  "mxfp8_producer_source_sha256": "f29f83d8b5939164eaf056750807098dba9dcd20bb40db4c1d16c86ffff68862",
+  "excluded_prior_optimizations": [
+    "vLLM-Omni runtime",
+    "QKV fusion",
+    "RDMA direct kernels",
+    "VSPLIT",
+    "O consumer graph",
+    "VAE mixed batching",
+    "VAE early gather",
+    "Green Contexts"
+  ],
+  "validated_videos": 35,
+  "frozen_input_plan": "manifest.json",
+  "validation_file": "validation.json"
+}
