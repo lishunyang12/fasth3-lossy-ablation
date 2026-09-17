@@ -3,5 +3,10 @@
 .metric-line{font:11px/1.6 Arial,sans-serif;margin:7px 0;color:#333}.video-card figcaption{flex-wrap:wrap;gap:3px}.video-meta{flex-wrap:wrap;gap:3px}
 
 .video-card figcaption{min-height:58px;align-content:center}.video-card figcaption span{display:block;width:100%}@media(min-width:951px) and (max-width:1250px){.video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.video-card figcaption{min-height:42px}.video-card figcaption span{display:none}}
+
+/* Keep the new combined schedule above the existing comparison grid. */
+.featured-combined { grid-column: 1 / -1; width: min(100%, 960px); justify-self: center; }
+.featured-combined video { max-height: 528px; object-fit: contain; }
+.featured-combined figcaption { font-weight: 700; }
 /* Portable Chinese font */
 @font-face{font-family:"H3 CJK";src:url("h3-cjk.woff2") format("woff2");font-display:swap;unicode-range:U+80-10FFFF}body{font-family:"H3 CJK",Arial,"Noto Sans CJK SC",sans-serif}h1,h2,h3{font-family:Georgia,"H3 CJK","Noto Serif CJK SC","Songti SC",serif}

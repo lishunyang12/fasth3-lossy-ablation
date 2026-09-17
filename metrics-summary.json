@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "Existing 7 x 7 public gallery plus two original-first-denoising-step arms",
+  "scope": "Seven prompts, ten variants; combined first-step-original MXFP8 + Sage added",
   "comparisons": [
     {
       "status": "PASS",
@@ -3340,9 +3340,380 @@
       "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
       "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
       "stats_relative": "metrics/sage_first_step_original/07-ninja-obstacle-course"
+    },
+    {
+      "status": "PASS",
+      "prompt": "01-moon-teahouse",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "c8f57fa7a6531d88888e2433abb0406aeaa83368f36ecb2dbfa21705039971f8",
+      "reference_sha256": "60406552032b2b148773cf5a08f1c972de3deabae94c801b9a15a641e19a6140",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 18.684733,
+        "u": 32.934128,
+        "v": 33.4613,
+        "average": 20.369361,
+        "min_frame": 16.957863,
+        "max_frame": 23.19853
+      },
+      "ssim": {
+        "y": 0.623655,
+        "u": 0.898031,
+        "v": 0.910912,
+        "all": 0.71726
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/01-moon-teahouse"
+    },
+    {
+      "status": "PASS",
+      "prompt": "02-dachshund-skatepark",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "0403221fe3a7fb905b91210d0bfae95b3335ccc8e95642759831dab652b968d6",
+      "reference_sha256": "f26e4a4e3d0eb0b2669c687a66b278680315009531279b7529b462532fb0c4c7",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 17.026526,
+        "u": 31.812409,
+        "v": 32.062932,
+        "average": 18.717882,
+        "min_frame": 16.735213,
+        "max_frame": 23.970936
+      },
+      "ssim": {
+        "y": 0.564546,
+        "u": 0.873364,
+        "v": 0.880264,
+        "all": 0.668635
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/02-dachshund-skatepark"
+    },
+    {
+      "status": "PASS",
+      "prompt": "03-attic-rain",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "e7bd76269debe14aba58f2e5b1b96b94c18be17a699273c19fde4be4acae6827",
+      "reference_sha256": "526f8df96507a49632990e38ad97f7c5ffd48fffaf650ec5f61c6ee15a33d535",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 19.914683,
+        "u": 33.225437,
+        "v": 34.028094,
+        "average": 21.583805,
+        "min_frame": 12.656894,
+        "max_frame": 23.194204
+      },
+      "ssim": {
+        "y": 0.61356,
+        "u": 0.89056,
+        "v": 0.906599,
+        "all": 0.708567
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/03-attic-rain"
+    },
+    {
+      "status": "PASS",
+      "prompt": "04-doorway-worlds",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "c557b2addd99d5ca277166e7adfa24d890db4c54d6dc0cd30ac9e84233478561",
+      "reference_sha256": "a02bc1b1ec46bad0df5e8fba9e0130d54b4b49aab51f6e6fe291f63bcc8ff838",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 18.528326,
+        "u": 31.304288,
+        "v": 30.309797,
+        "average": 20.16179,
+        "min_frame": 16.92197,
+        "max_frame": 23.401033
+      },
+      "ssim": {
+        "y": 0.617462,
+        "u": 0.881072,
+        "v": 0.868974,
+        "all": 0.703316
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/04-doorway-worlds"
+    },
+    {
+      "status": "PASS",
+      "prompt": "05-ronin-void",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "4c5671fc9aadc47ec82299ebcc6cc263971fde788b58da04f8f17bba360cdca3",
+      "reference_sha256": "128e417efea845b64d3572ea3cb9d268e4403108da12d8b462cd9d814543ead5",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 19.657758,
+        "u": 37.441255,
+        "v": 30.296296,
+        "average": 21.30827,
+        "min_frame": 17.901723,
+        "max_frame": 25.167171
+      },
+      "ssim": {
+        "y": 0.708022,
+        "u": 0.95821,
+        "v": 0.892614,
+        "all": 0.780485
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/05-ronin-void"
+    },
+    {
+      "status": "PASS",
+      "prompt": "06-anime-maid-livestream",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "dd76ffcf5d694646072d17aa043ac4511eb3c41366dc96463f7f033207e18b58",
+      "reference_sha256": "5fa0641f68fab01266145ed63b58882dc2422eff5c6dc03c8466f1f93e457a1a",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 16.386715,
+        "u": 29.023519,
+        "v": 30.136647,
+        "average": 18.043927,
+        "min_frame": 16.623169,
+        "max_frame": 18.779319
+      },
+      "ssim": {
+        "y": 0.40316,
+        "u": 0.774842,
+        "v": 0.817615,
+        "all": 0.534183
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/06-anime-maid-livestream"
+    },
+    {
+      "status": "PASS",
+      "prompt": "07-ninja-obstacle-course",
+      "arm": "dit_mxfp8_sage_first_step_original",
+      "reference_arm": "original",
+      "distorted_sha256": "76afe6046445dc8561033c85145ff224a4329da8a01575efef0331d592b76250",
+      "reference_sha256": "10327ab00280fb97eae8ea82ab679f02b51a806f75da3b0ff448a43b95ad6a5b",
+      "distorted_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "reference_probe": {
+        "width": 1280,
+        "height": 704,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "24/1",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "361",
+        "start_time": "0.000000",
+        "duration": "15.041667",
+        "color_range": null,
+        "color_space": null
+      },
+      "frames_compared": 361,
+      "alignment": "Same frame index and original zero-based 24 fps presentation timeline; no shift search, interpolation, crop or resizing.",
+      "distorted_trailing_frames_excluded": 0,
+      "reference_trailing_frames_excluded": 0,
+      "psnr_db": {
+        "y": 16.655635,
+        "u": 26.59074,
+        "v": 24.838653,
+        "average": 18.14973,
+        "min_frame": 14.328473,
+        "max_frame": 22.854387
+      },
+      "ssim": {
+        "y": 0.494826,
+        "u": 0.738717,
+        "v": 0.719721,
+        "all": 0.572957
+      },
+      "metric_domain": "Decoded MP4 8-bit YUV420p; PSNR average is derived from global MSE weighted by plane pixel counts, SSIM All is FFmpeg plane-weighted temporal mean; includes codec effects.",
+      "ffmpeg_version": "ffmpeg version N-125972-ge13b2e00e8-20260805 Copyright (c) 2000-2026 the FFmpeg developers",
+      "stats_relative": "metrics/dit_mxfp8_sage_first_step_original/07-ninja-obstacle-course"
     }
   ],
   "metric_definitions_url": "https://ffmpeg.org/ffmpeg-filters.html#psnr",
   "ssim_definition_url": "https://ffmpeg.org/ffmpeg-filters.html#ssim",
-  "interpretation": "Measures similarity to Original, not subjective quality. Generative trajectories may differ at the same seed. Each new arm protects the first of four complete denoising forwards, then enables the existing MXFP8 or Sage method for the last three; 25%/75% by forward count, not 10%/90%."
+  "interpretation": "Measures similarity to Original, not subjective quality. New combined arm: step 1 original BF16 projections and Triton VSA; steps 2-4 both DiT MXFP8 and Sage. Original VAE and four-step sampling schedule retained. Existing 63 comparisons reused after video hash verification."
 }

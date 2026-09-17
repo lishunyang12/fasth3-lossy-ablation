@@ -1,17 +1,15 @@
-# FastH3 有损消融与早期去噪保护
+# FastH3 首步原版，后三步 MXFP8 + Sage
 
-在已有七组完整 prompt、seed 1101、1280×704、24 fps、4 次 DiT 的对照上新增两组。每组末尾依次追加「MXFP8 · 首步原版」「Sage · 首步原版」，共 63 段视频；此前 49 段保留原始字节。
+每个 case 顶部新增一条组合视频，共 7 个 prompt × 10 个版本 = 70 段。此前 63 段视频保持原始字节。
 
-用户提出前 10% 原版、后 90% 有损。当前实际只有 4 次 DiT forward，保护一个完整早期去噪步的最小粒度为 25%。本轮采用第 1 次原版、第 2–4 次对应有损方法，明确标注 25% / 75%（按 forward 次数）。未增加采样步数、未插入 sigma，也不是每一步的前几层保护；本轮结果不能冒充精确 10% / 90% 的结果。
+新增组合版共有 4 次 DiT forward。第 1 步：300 个 Q/K/V/O 与 FFN 投影使用原始 BF16，50 次 fine sparse attention 使用原版 Triton VSA，不使用 Sage。第 2–4 步：同时启用现有 DiT MXFP8 与 Sage Attention。原版视频/音频 VAE、checkpoint、稀疏选择、采样、通信、完整 prompt、seed 1101 和 1280×704 输出设置不变。
 
-MXFP8 组：首步全部使用原始 BF16 Q/K/V/O 和 FFN 投影；后 3 步的全部 300 个 DiT 投影使用与页面 DiT MXFP8 相同的有损实现。VSA attention 始终为原版。
+这次是两项有损方法的组合实验。此前 MXFP8 首步原版与 Sage 首步原版是分别启用单项方法的对照。保护一个完整步骤对应 25% / 75%，未改变原始 4 步采样轨迹。
 
-Sage 组：首步使用原版 Triton VSA attention，后 3 步的 50 层 attention 使用与页面 Sage Attention 相同的 kernel。所有线性投影始终为原始 BF16。两个版本分别测试，不叠加 MXFP8 与 Sage。
+新增 56 份 rank/request 审计逐步验证投影与 attention 的实际调度。每个 rank 每条请求：首步 300 个 BF16 投影与 50 次原版 VSA，后三步每个投影调用 MXFP8 3 次，Sage 合计 150 次。7 个 case 的首步输入与 video/audio velocity 哈希均与此前两个已验证的首步原版对照完全一致。
 
-每个 case、每个 rank、每个去噪步均核验 300 个线性投影和 50 次 attention 的实际执行模式。新增 112 份 rank/request 审计通过。两组的首步输入和 video/audio velocity 的 SHA-256 在全部 7 个 case 中一致，确认从相同原版首步出发。已有有损实现和上游源码保持字节不变。
+新增 7 段视频完成全帧视频与音频解码。每条有损视频对同 prompt 的 Original 测量 PSNR/SSIM：完整 361 帧、24 fps、解码后 8-bit YUV420p，不缩放、不裁剪、不搜索时间偏移。指标含编码影响，表示对原版相似度，不等同于主观画质。此前指标在重新核验视频 SHA256 后复用。
 
-所有 63 段视频完整解码通过，均为 361 帧。全部 56 个有损视频按同组 Original 的完整 361 帧测量 PSNR/SSIM，另有 7 个原版自检。指标在解码的 8-bit YUV420p 上计算，包括编码影响；不缩放、不裁剪、不搜索时间偏移。指标代表对原版的相似度，不直接等同于主观画质；有限 case 和固定 seed 也不能单独证明一般性的早期敏感性规律。
+本次使用原版 VAE 的质量实验脚本，保留调度审计、首步 tensor 导出及首次编译开销。运行时间不是已优化实时服务的延迟基准，不能据此声称组合版已达到实时。
 
-逐片 PSNR 由全视频加权 MSE 转换为 dB；SSIM 使用 FFmpeg All。汇总为 7 个 case 分数的算术平均。完整指标及逐帧日志见 metrics-summary.json、metrics.csv、metrics-per-frame.zip、METRICS.zh.md。
-
-历史 ZIP 仍为原有 35 段，新视频可在卡片下载。此轮保留质量核验与首步 tensor 导出开销，计时不能当作最快链路的实时性能基准。
+所有 MP4 保留原始字节，可从每张卡片下载；历史 ZIP 仍是原有 35 段。新增 7 段使用同一 GitHub 仓库的 combined-first-step-20260918 release assets 托管，以保持 Pages 站点低于 1 GB；原有 63 段地址不变。详见 execution-manifest.json、validation.json、validation-combined.json 与 metrics-summary.json。

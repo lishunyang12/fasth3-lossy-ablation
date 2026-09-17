@@ -1,5 +1,5 @@
-# FastH3: Single-Factor Lossy Ablations
+# FastH3: Precision Ablations
 
 [Open the comparison gallery](https://lishunyang12.github.io/fasth3-lossy-ablation/)
 
-Seven prompts, nine variants, 63 original videos. See [methodology](README.zh.md) and [validation](validation.json).
+Seven prompts, ten variants, 70 original videos. See [methodology](README.zh.md) and [validation](validation.json).

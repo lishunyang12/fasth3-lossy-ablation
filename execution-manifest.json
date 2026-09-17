@@ -48,6 +48,11 @@
     ],
     "sage_first_step_original": [
       "First DiT denoising forward: original Triton VSA attention. Last three forwards: identical Sage Attention kernel to the existing Sage control. All DiT projections remain original BF16 throughout."
+    ],
+    "dit_mxfp8_sage_first_step_original": [
+      "Forward 1: all 300 DiT Q/K/V/O and FFN projections use original BF16; original Triton VSA fine attention.",
+      "Forwards 2-4: all 300 DiT projections use the existing MXFP8 implementation AND all 50 VSA fine-attention calls use the existing Sage implementation.",
+      "VAE, sampling schedule, checkpoint, prompts, seed, sparse selection and communication retain the original gallery configuration."
     ]
   },
   "prompts": [
@@ -87,8 +92,8 @@
       "sha256": "66f06fb2b7d7fac3ab97b6b0dae4a367df9527f1222d540801d271615c73767d"
     }
   ],
-  "videos_per_prompt": 9,
-  "total_videos": 63,
+  "videos_per_prompt": 10,
+  "total_videos": 70,
   "normalization": "Only add missing leading i in integrated_multimodal_description for prompts 03, 05, 07; remove user group labels; no padding, truncation or prompt rewriting.",
   "mxfp8_producer_source_sha256": "f29f83d8b5939164eaf056750807098dba9dcd20bb40db4c1d16c86ffff68862",
   "excluded_prior_optimizations": [
@@ -106,10 +111,11 @@
   "validation_file": "validation.json",
   "extension_date": "2026-09-18",
   "extension_control": [
-    "dit_mxfp8",
-    "sage_attention"
+    "original",
+    "dit_mxfp8_first_step_original",
+    "sage_first_step_original"
   ],
-  "extension_only_change": "For each method separately, use original operations on the first of four denoising forwards; use the existing lossy method on the final three. No sampling schedule, VAE, sparsity, projection scope, or checkpoint changes.",
+  "extension_only_change": "Step 1: original BF16 DiT projections and original Triton VSA; steps 2-4: both existing DiT MXFP8 and Sage attention. Original VAE, checkpoint, sampling, seed, prompts and geometry retained.",
   "extension_schedule": {
     "original_forward_indices": [
       0
@@ -121,7 +127,10 @@
     ],
     "original_forward_fraction": 0.25,
     "lossy_forward_fraction": 0.75,
-    "user_requested_fraction": 0.1,
-    "granularity_note": "Four actual DiT forwards. First full denoising step is 25% by forward count, not 10%; sampling schedule unchanged."
+    "lossy_methods": [
+      "dit_mxfp8",
+      "sage_attention"
+    ],
+    "granularity_note": "One original forward followed by three combined-lossy forwards; four total DiT forwards."
   }
 }
