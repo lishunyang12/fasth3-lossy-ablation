@@ -24,8 +24,8 @@
     "source_compatibility_patch": "Only duration validation permits 362 VAE-aligned frames; applied equally to all arms."
   },
   "arms": {
-    "dit_mxfp8_o_bf16": [
-      "Relative to the page DiT MXFP8 arm: retain original BF16 attention to_out in all 50 blocks; Q/K/V and FF input/output retain the identical MXFP8 implementation."
+    "dit_mxfp8_qkvo_bf16": [
+      "Relative to DiT MXFP8 + BF16 O: also restore Q/K/V to original BF16. All 200 attention Q/K/V/O projections use original BF16; 100 FFN input/output projections retain the identical MXFP8 implementation."
     ]
   },
   "prompts": [
@@ -79,13 +79,14 @@
     "VAE early gather",
     "Green Contexts"
   ],
-  "control_arm": "dit_mxfp8",
+  "control_arm": "dit_mxfp8_o_bf16",
   "comparison_reference": "original",
   "parent_runtime_sha256": {
-    "ablation_runtime.py": "2995c031af98079670f6b708169e90edc51ae9d4f258eaa1c85bc3e4090d303b",
+    "ablation_runtime.py": "fe9357950ca1c31c200265388d2880ea279bea182b30aeead9642391dca64509",
     "mxfp8_producer.py": "600eca85414913a89416ef35b4bc0dc51564acd5d63d98028f0fc03696b6f819",
-    "run_arm.py": "4737707fb19f08c3ff63e38683df95e0e65d434517acd30679ff46fbb82115eb",
-    "launch_arm.py": "fc82ad4a5228be221d2da041be7cbf9286168074bd57badb9c0cb95bf906ae97",
-    "manifest.json": "2d87a914cc929f8827bc7517b71fbb4fde474b9457575795feed1e79ea1d0759"
-  }
+    "launch_arm.py": "2c343eefb24577105410721a027d0a14454a6289f6c829c59d12658647c6c330",
+    "run_arm.py": "c70ff81c8bb66cfb92fe05d59861ae9fa47b036d32dd4715c3a034b77a85c9f3",
+    "manifest.json": "72f43cccc5128c305118d2afc4c2f20b015f055a2aaa1f060683cc879fbaae7c"
+  },
+  "additional_control_arm": "dit_mxfp8"
 }

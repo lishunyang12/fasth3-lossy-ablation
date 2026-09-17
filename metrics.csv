@@ -41,3 +41,10 @@ prompt,arm,frames,PSNR_YUV_dB,PSNR_Y_dB,SSIM_All,SSIM_Y
 05-ronin-void,dit_mxfp8_o_bf16,361,18.197101,16.527812,0.722143,0.630029
 06-anime-maid-livestream,dit_mxfp8_o_bf16,361,15.731088,14.077836,0.429774,0.286472
 07-ninja-obstacle-course,dit_mxfp8_o_bf16,361,16.077377,14.670275,0.504095,0.428011
+01-moon-teahouse,dit_mxfp8_qkvo_bf16,361,17.271139,15.586137,0.622174,0.504986
+02-dachshund-skatepark,dit_mxfp8_qkvo_bf16,361,15.439558,13.732627,0.589041,0.464248
+03-attic-rain,dit_mxfp8_qkvo_bf16,361,19.675549,18.005248,0.653101,0.544927
+04-doorway-worlds,dit_mxfp8_qkvo_bf16,361,17.095364,15.457359,0.613955,0.512591
+05-ronin-void,dit_mxfp8_qkvo_bf16,361,19.739996,18.084767,0.752248,0.670814
+06-anime-maid-livestream,dit_mxfp8_qkvo_bf16,361,15.824569,14.173288,0.430607,0.285339
+07-ninja-obstacle-course,dit_mxfp8_qkvo_bf16,361,16.522738,15.074045,0.512928,0.435447
