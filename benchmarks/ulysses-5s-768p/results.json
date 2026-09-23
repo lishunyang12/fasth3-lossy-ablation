@@ -12,7 +12,324 @@
   },
   "timing_boundary": "Local HTTP submission to complete MP4 response bytes; excludes model loading, two warmups and post-response validation.",
   "protocol": "Five sequential requests per arm. Publish repeat 1 without re-encoding. Report actual decoded frame count. Identical request, seed and prompt across arms.",
-  "arms": [],
+  "arms": [
+    {
+      "key": "optimized-base",
+      "label": "Optimized baseline",
+      "track": "optimized",
+      "request_seconds": [
+        4.666182689135894,
+        4.675563522148877,
+        4.681992647936568,
+        4.690105772810057,
+        4.698794882046059
+      ],
+      "median_seconds": 4.681992647936568,
+      "min_seconds": 4.666182689135894,
+      "max_seconds": 4.698794882046059,
+      "median_rtf": 0.9061920669430732,
+      "under_5": 5,
+      "under_playback": 5,
+      "warmup_seconds": [
+        16.340221380116418,
+        4.692218508105725
+      ],
+      "load_seconds": 422.25831137411296,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.175,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 10206291,
+        "sha256": "d4901bef7a356fdfc4cc1505629988e4d993db6744f61bf7aeb876ad126f35bd",
+        "decode": "PASS"
+      },
+      "asset_prefix": "benchmarks/ulysses-5s-768p",
+      "encoder": {
+        "video": "H.264 / libx264",
+        "audio": "AAC",
+        "crf": 18.0
+      }
+    },
+    {
+      "key": "optimized-fences",
+      "label": "Optimized + PR #5317 fences",
+      "track": "optimized",
+      "request_seconds": [
+        4.659823487047106,
+        4.66123240115121,
+        4.67330171703361,
+        4.682930525857955,
+        4.69424985605292
+      ],
+      "median_seconds": 4.67330171703361,
+      "min_seconds": 4.659823487047106,
+      "max_seconds": 4.69424985605292,
+      "median_rtf": 0.9045099513929598,
+      "under_5": 5,
+      "under_playback": 5,
+      "warmup_seconds": [
+        22.814474185928702,
+        4.6871386668644845
+      ],
+      "load_seconds": 144.0978217869997,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.175,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 10206291,
+        "sha256": "d4901bef7a356fdfc4cc1505629988e4d993db6744f61bf7aeb876ad126f35bd",
+        "decode": "PASS"
+      },
+      "asset_prefix": "benchmarks/ulysses-5s-768p",
+      "encoder": {
+        "video": "H.264 / libx264",
+        "audio": "AAC",
+        "crf": 18.0
+      }
+    },
+    {
+      "key": "original",
+      "label": "Original FastH3",
+      "track": "original",
+      "request_seconds": [
+        22.814603788079694,
+        23.259365485049784,
+        22.888991127023473,
+        22.91032107290812,
+        22.834863323019817
+      ],
+      "median_seconds": 22.888991127023473,
+      "min_seconds": 22.814603788079694,
+      "max_seconds": 23.259365485049784,
+      "median_rtf": 4.430127029093121,
+      "under_5": 0,
+      "under_playback": 0,
+      "warmup_seconds": [
+        42.00765839894302,
+        23.166222010040656
+      ],
+      "load_seconds": 482.1820451640524,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.152,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 5369058,
+        "sha256": "fd3538b15923cc517dcfb19e7128edd7bc0743e69889e8cff89a8b78fafe93e7",
+        "decode": "PASS"
+      },
+      "asset_prefix": "benchmarks/ulysses-5s-768p",
+      "encoder": {
+        "video": "H.264 / libx264",
+        "audio": "AAC",
+        "crf": 23.0
+      },
+      "denoise_seconds": [
+        11.244829176925123,
+        11.2813191160094,
+        11.199471672065556,
+        11.24797152588144,
+        11.204126084921882
+      ],
+      "stage_wall_seconds": {
+        "input_preparation_stage": [
+          4.5428983867168427e-05,
+          8.332799188792706e-05,
+          5.211890675127506e-05,
+          5.588890053331852e-05,
+          6.938795559108257e-05
+        ],
+        "conditioning_stage": [
+          1.8788065649569035,
+          1.905230934964493,
+          1.9118711261544377,
+          1.906802725046873,
+          1.9111264490056783
+        ],
+        "latent_preparation_stage": [
+          0.009790165815502405,
+          0.009703906951472163,
+          0.01492076413705945,
+          0.012089625000953674,
+          0.015323068015277386
+        ],
+        "denoising_stage": [
+          11.244829176925123,
+          11.2813191160094,
+          11.199471672065556,
+          11.24797152588144,
+          11.204126084921882
+        ],
+        "video_decoding_stage": [
+          7.313360863132402,
+          7.600872442126274,
+          7.356753197964281,
+          7.322395568946376,
+          7.2910798660013825
+        ],
+        "audio_decoding_stage": [
+          0.3981396700255573,
+          0.39556411700323224,
+          0.4254618939012289,
+          0.38724817405454814,
+          0.3885223811957985
+        ],
+        "PostDecodeFrameProcessStage": [
+          0.6207391561474651,
+          0.6190282572060823,
+          0.6133234580047429,
+          0.6357368589378893,
+          0.6456413629930466
+        ],
+        "VideoSaveStage": [
+          0.11881457408890128,
+          0.16358501696959138,
+          0.1354449880309403,
+          0.12236602092161775,
+          0.13855870300903916
+        ],
+        "AudioMuxStage": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "key": "original-workspace",
+      "label": "Original + PR #5027 workspace",
+      "track": "original",
+      "request_seconds": [
+        23.058526334818453,
+        22.790835798950866,
+        22.63426429196261,
+        22.44739115308039,
+        22.6047210409306
+      ],
+      "median_seconds": 22.63426429196261,
+      "min_seconds": 22.44739115308039,
+      "max_seconds": 23.058526334818453,
+      "median_rtf": 4.380825064197597,
+      "under_5": 0,
+      "under_playback": 0,
+      "warmup_seconds": [
+        43.70412983512506,
+        23.18850973295048
+      ],
+      "load_seconds": 444.1533938369248,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.152,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 5369555,
+        "sha256": "a61487f494c8e2b897a20819853894d4eaf4e518c239311132cf9f918e946fa2",
+        "decode": "PASS"
+      },
+      "asset_prefix": "benchmarks/ulysses-5s-768p",
+      "encoder": {
+        "video": "H.264 / libx264",
+        "audio": "AAC",
+        "crf": 23.0
+      },
+      "denoise_seconds": [
+        11.199054844211787,
+        11.160045218886808,
+        11.150640819221735,
+        11.232963623013347,
+        11.153900409117341
+      ],
+      "stage_wall_seconds": {
+        "input_preparation_stage": [
+          6.748898886144161e-05,
+          0.00011590821668505669,
+          4.922901280224323e-05,
+          4.270905628800392e-05,
+          6.536906585097313e-05
+        ],
+        "conditioning_stage": [
+          1.8957117991521955,
+          1.9026620739605278,
+          1.9205130559857935,
+          1.860743235098198,
+          1.84036171506159
+        ],
+        "latent_preparation_stage": [
+          0.012913760961964726,
+          0.011189450975507498,
+          0.016332879895344377,
+          0.009142766939476132,
+          0.014526073122397065
+        ],
+        "denoising_stage": [
+          11.199054844211787,
+          11.160045218886808,
+          11.150640819221735,
+          11.232963623013347,
+          11.153900409117341
+        ],
+        "video_decoding_stage": [
+          7.378072980092838,
+          7.399627143982798,
+          7.130414603976533,
+          7.008375684032217,
+          7.225206404924393
+        ],
+        "audio_decoding_stage": [
+          0.42509215301834047,
+          0.4159305449575186,
+          0.4322905149310827,
+          0.3981144009158015,
+          0.4314662991091609
+        ],
+        "PostDecodeFrameProcessStage": [
+          0.6182961470913142,
+          0.6184814930893481,
+          0.6195139749906957,
+          0.6437355049420148,
+          0.6168057119939476
+        ],
+        "VideoSaveStage": [
+          0.11754485499113798,
+          0.1108270650729537,
+          0.12082758685573936,
+          0.12534924712963402,
+          0.1208922560326755
+        ],
+        "AudioMuxStage": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
   "pr5027": {
     "head": "e4a8e35059235306908b32a8186b958586828a70",
     "tested_subset": "Reusable NCCL workspace and explicit out buffers for stock FastVideo serialized Ulysses. Original Triton sparse attention and gate retained.",
@@ -23,5 +340,15 @@
     "tested_subset": "K/V shared-memory proxy fences backported to existing BF16 and Sage SM120 attention kernels; end-to-end optimized arm uses Sage.",
     "not_tested": "SM90/SM100-specific attention paths, FP8 wire transport and full native head-chunk pipeline."
   },
-  "scope": "Two separate within-stack PR comparisons. The stock full checkpoint and optimized base-plus-adapter deployment are different artifacts; cross-stack differences are not attributed solely to PRs or precision."
+  "scope": "Two separate within-stack PR comparisons. The stock full checkpoint and optimized base-plus-adapter deployment are different artifacts; cross-stack differences are not attributed solely to PRs or precision.",
+  "provenance": {
+    "original_source": "FastVideo 3196835913ce9e97b23888b32643a1207cc5ee70, existing gallery snapshot",
+    "original_checkpoint_revision": "b65818d41939b5085451074fe8ca8b799f8d4921",
+    "original_torch": "2.13.0",
+    "optimized_torch": "2.13.0+cu132",
+    "cutlass_dsl": "4.6.2",
+    "triton": "3.7.1",
+    "original_ulysses_rows": 38168,
+    "optimized_ulysses_rows": 38208
+  }
 }
