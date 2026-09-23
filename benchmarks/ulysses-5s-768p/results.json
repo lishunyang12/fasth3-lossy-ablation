@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-23",
+  "request": {
+    "task": "t2va",
+    "width": 1344,
+    "height": 768,
+    "frames": 124,
+    "fps": 24,
+    "seed": 1101,
+    "dit_forwards": 4,
+    "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3"
+  },
+  "timing_boundary": "Local HTTP submission to complete MP4 response bytes; excludes model loading, two warmups and post-response validation.",
+  "protocol": "Five sequential requests per arm. Publish repeat 1 without re-encoding. Report actual decoded frame count. Identical request, seed and prompt across arms.",
+  "arms": [],
+  "pr5027": {
+    "head": "e4a8e35059235306908b32a8186b958586828a70",
+    "tested_subset": "Reusable NCCL workspace and explicit out buffers for stock FastVideo serialized Ulysses. Original Triton sparse attention and gate retained.",
+    "not_tested": "Head-chunk attention pipeline; not directly compatible with the optimized custom PCIe/RDMA producer-direct API."
+  },
+  "pr5317": {
+    "head": "b1f3a95a7fcec2af73bf520dcf06ae8aff6fa6d1",
+    "tested_subset": "K/V shared-memory proxy fences backported to existing BF16 and Sage SM120 attention kernels; end-to-end optimized arm uses Sage.",
+    "not_tested": "SM90/SM100-specific attention paths, FP8 wire transport and full native head-chunk pipeline."
+  },
+  "scope": "Two separate within-stack PR comparisons. The stock full checkpoint and optimized base-plus-adapter deployment are different artifacts; cross-stack differences are not attributed solely to PRs or precision."
+}

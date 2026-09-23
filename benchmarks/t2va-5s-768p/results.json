@@ -47,7 +47,7 @@
   "arms": [
     {
       "key": "fastest",
-      "label": "最快方案",
+      "label": "All-step MXFP8 + Sage",
       "arm": "all_mxfp8",
       "request_seconds": [
         4.668449042132124,
@@ -80,11 +80,12 @@
         "bytes": 10206291,
         "sha256": "d4901bef7a356fdfc4cc1505629988e4d993db6744f61bf7aeb876ad126f35bd",
         "decode": "PASS"
-      }
+      },
+      "asset_prefix": "benchmarks/t2va-5s-768p"
     },
     {
       "key": "first-step-bf16",
-      "label": "首步回退",
+      "label": "First-step BF16 rollback",
       "arm": "first_step_bf16",
       "request_seconds": [
         5.205809125909582,
@@ -117,7 +118,8 @@
         "bytes": 10141455,
         "sha256": "5dd445775169e2722972e8a6982ce5e61ae7fe233ba46c71e1d3992e2c6f7c15",
         "decode": "PASS"
-      }
+      },
+      "asset_prefix": "benchmarks/t2va-5s-768p"
     }
   ],
   "common": {
