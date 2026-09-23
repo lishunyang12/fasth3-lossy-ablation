@@ -1,0 +1,443 @@
+{
+  "date": "2026-09-23",
+  "task": "Ref2VA",
+  "requested_seconds": 10,
+  "speech_target_seconds": [
+    5,
+    10
+  ],
+  "dialogue": "你好，我是知微。今天陪你读书，也聊聊你的故事。",
+  "selection": "First formal sample after one same-input warmup per model, fixed before visual review.",
+  "reference_sha256": "8db8820f82cb14799e52343a5581502e0f62239237e4883205ca3462b1672c15",
+  "prompt_sha256": "b82c82c2e0d6a066a02261977cba57866b68b5c60426009c5769b80daa3ce218",
+  "arms": [
+    {
+      "id": "lightx2v-original-4step",
+      "label": "LightX2V 原精度四步",
+      "configuration": "Turbo v0.1 · BF16 DiT · 原版 VAE",
+      "seed": 230923,
+      "denoiser_evaluations": 4,
+      "request_seconds": 24.044001692906022,
+      "raw_duration_seconds": 10.125,
+      "full_decode": "PASS",
+      "width": 960,
+      "height": 544,
+      "fps": 24,
+      "raw_frames": 243,
+      "preview_sha256": "6963ac526cea6107a6b0708b03111776fcd7b521fde7c307fd24391b0907a3fe",
+      "raw_sha256": "8ea96bc1e98de5d9b25fd6e21657768e036551f92c793130107ca0e7c2824c08",
+      "preview_frames": 240,
+      "preview_duration_seconds": 10.0,
+      "raw_file": "https://github.com/lishunyang12/fasth3-lossy-ablation/releases/download/avatar-quality-20260923/lightx2v-original-4step-raw.mp4",
+      "preview_file": "lightx2v-original-4step.mp4"
+    },
+    {
+      "id": "minimax-original-50step",
+      "label": "MiniMax-H3 原版 50 步",
+      "configuration": "无蒸馏 LoRA · BF16 DiT · 原版 VAE",
+      "seed": 230923,
+      "denoiser_evaluations": 50,
+      "request_seconds": 263.8453291330952,
+      "raw_duration_seconds": 10.125,
+      "full_decode": "PASS",
+      "width": 960,
+      "height": 544,
+      "fps": 24,
+      "raw_frames": 243,
+      "preview_sha256": "bc0c3cbaeab6e21384eabfaf8d95e008474eca0d5b37fcfda741201fa5c042d3",
+      "raw_sha256": "9f08fcd24681f7d8e71fbab3fcd0fcb84772aa38fd79fb58dde01b8972e98cff",
+      "preview_frames": 240,
+      "preview_duration_seconds": 10.0,
+      "raw_file": "https://github.com/lishunyang12/fasth3-lossy-ablation/releases/download/avatar-quality-20260923/minimax-original-50step-raw.mp4",
+      "preview_file": "minimax-original-50step.mp4"
+    },
+    {
+      "id": "deployed-4step",
+      "label": "上线四步配置",
+      "configuration": "MXFP8 + Sage · NVFP4 VAE · 10 秒帧数适配",
+      "seed": 230923,
+      "denoiser_evaluations": 4,
+      "request_seconds": 6.992767889983952,
+      "raw_duration_seconds": 10.125,
+      "full_decode": "PASS",
+      "width": 960,
+      "height": 544,
+      "fps": 24,
+      "raw_frames": 243,
+      "preview_sha256": "501fe72c82289ff4ea4d8ba494d49475678fb2d3e3e020c0d25feedfaaa86b10",
+      "raw_sha256": "5854351ab922bf477201024e3f090240bff1fc7eec23bf5e903670559d6185d8",
+      "preview_frames": 240,
+      "preview_duration_seconds": 10.0,
+      "raw_file": "https://github.com/lishunyang12/fasth3-lossy-ablation/releases/download/avatar-quality-20260923/deployed-4step-raw.mp4",
+      "preview_file": "deployed-4step.mp4"
+    }
+  ],
+  "review": {
+    "scope": "CPU Whisper small word timestamps and full decoded audio diagnostics; not a lip-sync or human listening score. Decoded AAC samples above full scale can be codec overshoot and do not alone prove waveform clipping.",
+    "expected_dialogue": "你好，我是知微。今天陪你读书，也聊聊你的故事。",
+    "target_speech_interval_seconds": [
+      5,
+      10
+    ],
+    "arms": [
+      {
+        "id": "lightx2v-original-4step",
+        "label": "LightX2V 原精度四步",
+        "recognized": "你好 我是芝薇 今天陪你讀書也聊聊你的故事",
+        "words": [
+          {
+            "word": "你好",
+            "start": 4.520000000000001,
+            "end": 5.000000000000001,
+            "probability": 0.4759526252746582
+          },
+          {
+            "word": " 我是",
+            "start": 5.000000000000001,
+            "end": 5.48,
+            "probability": 0.6711855530738831
+          },
+          {
+            "word": "芝",
+            "start": 5.48,
+            "end": 5.84,
+            "probability": 0.7062749713659286
+          },
+          {
+            "word": "薇",
+            "start": 5.84,
+            "end": 5.94,
+            "probability": 0.8936715126037598
+          },
+          {
+            "word": " 今天",
+            "start": 6.9,
+            "end": 7.12,
+            "probability": 0.992720365524292
+          },
+          {
+            "word": "陪",
+            "start": 7.12,
+            "end": 7.3,
+            "probability": 0.992363840341568
+          },
+          {
+            "word": "你",
+            "start": 7.3,
+            "end": 7.5,
+            "probability": 0.9828341007232666
+          },
+          {
+            "word": "讀",
+            "start": 7.5,
+            "end": 7.6,
+            "probability": 0.8002204596996307
+          },
+          {
+            "word": "書",
+            "start": 7.6,
+            "end": 8.02,
+            "probability": 0.9620335102081299
+          },
+          {
+            "word": "也",
+            "start": 8.02,
+            "end": 8.52,
+            "probability": 0.518186628818512
+          },
+          {
+            "word": "聊",
+            "start": 8.52,
+            "end": 8.7,
+            "probability": 0.99346524477005
+          },
+          {
+            "word": "聊",
+            "start": 8.7,
+            "end": 8.86,
+            "probability": 0.9723032116889954
+          },
+          {
+            "word": "你的",
+            "start": 8.86,
+            "end": 9.12,
+            "probability": 0.9830270409584045
+          },
+          {
+            "word": "故",
+            "start": 9.12,
+            "end": 9.4,
+            "probability": 0.9992664456367493
+          },
+          {
+            "word": "事",
+            "start": 9.4,
+            "end": 9.6,
+            "probability": 0.9996438026428223
+          }
+        ],
+        "asr_start": 4.520000000000001,
+        "asr_end": 9.6,
+        "speech_timing_description": "ASR 估计 4.52–9.60 秒（跨度 5.08 秒）",
+        "visual_observation": "抽帧可见从读书转向镜头，4.5 秒时已张口；人物、衣服和桌面物件保持可辨认。说话时微笑和口部张幅较大。",
+        "audio_signal": {
+          "peak": 1.307417869567871,
+          "samples_at_or_above_full_scale": 1713,
+          "first_five_seconds_rms": 0.13370922207832336,
+          "final_five_seconds_rms": 0.33520373702049255,
+          "finite": true
+        }
+      },
+      {
+        "id": "minimax-original-50step",
+        "label": "MiniMax-H3 原版 50 步",
+        "recognized": "你好 我是芝薇 今天陪你读书也聊聊你的故事",
+        "words": [
+          {
+            "word": "你好",
+            "start": 4.520000000000001,
+            "end": 5.000000000000001,
+            "probability": 0.44559162855148315
+          },
+          {
+            "word": " 我是",
+            "start": 5.000000000000001,
+            "end": 5.48,
+            "probability": 0.7207739949226379
+          },
+          {
+            "word": "芝",
+            "start": 5.48,
+            "end": 5.84,
+            "probability": 0.7476098537445068
+          },
+          {
+            "word": "薇",
+            "start": 5.84,
+            "end": 5.94,
+            "probability": 0.8984614014625549
+          },
+          {
+            "word": " 今天",
+            "start": 6.9,
+            "end": 7.12,
+            "probability": 0.9930223822593689
+          },
+          {
+            "word": "陪",
+            "start": 7.12,
+            "end": 7.3,
+            "probability": 0.9927383959293365
+          },
+          {
+            "word": "你",
+            "start": 7.3,
+            "end": 7.5,
+            "probability": 0.9851257801055908
+          },
+          {
+            "word": "读",
+            "start": 7.5,
+            "end": 7.62,
+            "probability": 0.8166076242923737
+          },
+          {
+            "word": "书",
+            "start": 7.62,
+            "end": 8.0,
+            "probability": 0.9992983341217041
+          },
+          {
+            "word": "也",
+            "start": 8.0,
+            "end": 8.52,
+            "probability": 0.6091889142990112
+          },
+          {
+            "word": "聊",
+            "start": 8.52,
+            "end": 8.7,
+            "probability": 0.9844983220100403
+          },
+          {
+            "word": "聊",
+            "start": 8.7,
+            "end": 8.86,
+            "probability": 0.9824956655502319
+          },
+          {
+            "word": "你的",
+            "start": 8.86,
+            "end": 9.12,
+            "probability": 0.9911148548126221
+          },
+          {
+            "word": "故",
+            "start": 9.12,
+            "end": 9.4,
+            "probability": 0.9988242983818054
+          },
+          {
+            "word": "事",
+            "start": 9.4,
+            "end": 9.56,
+            "probability": 0.9993960857391357
+          }
+        ],
+        "asr_start": 4.520000000000001,
+        "asr_end": 9.56,
+        "speech_timing_description": "ASR 估计 4.52–9.56 秒（跨度 5.04 秒）",
+        "visual_observation": "抽查帧中的转头时序、构图与持书动作和原精度四步接近，未看到明显的整体质量跃升；局部细节仍需看原始视频。",
+        "audio_signal": {
+          "peak": 1.3405354022979736,
+          "samples_at_or_above_full_scale": 1511,
+          "first_five_seconds_rms": 0.13235589861869812,
+          "final_five_seconds_rms": 0.3318886160850525,
+          "finite": true
+        }
+      },
+      {
+        "id": "deployed-4step",
+        "label": "上线四步配置",
+        "recognized": "你好 我是芝薇 今天陪你讀書也聊聊你的故事",
+        "words": [
+          {
+            "word": "你好",
+            "start": 4.52,
+            "end": 5.0,
+            "probability": 0.5006723999977112
+          },
+          {
+            "word": " 我是",
+            "start": 5.0,
+            "end": 5.48,
+            "probability": 0.6925023794174194
+          },
+          {
+            "word": "芝",
+            "start": 5.48,
+            "end": 5.84,
+            "probability": 0.7152585983276367
+          },
+          {
+            "word": "薇",
+            "start": 5.84,
+            "end": 5.96,
+            "probability": 0.9045699238777161
+          },
+          {
+            "word": " 今天",
+            "start": 6.2,
+            "end": 7.12,
+            "probability": 0.9938246011734009
+          },
+          {
+            "word": "陪",
+            "start": 7.12,
+            "end": 7.3,
+            "probability": 0.9933652281761169
+          },
+          {
+            "word": "你",
+            "start": 7.3,
+            "end": 7.5,
+            "probability": 0.9855194091796875
+          },
+          {
+            "word": "讀",
+            "start": 7.5,
+            "end": 7.6,
+            "probability": 0.7456988096237183
+          },
+          {
+            "word": "書",
+            "start": 7.6,
+            "end": 8.12,
+            "probability": 0.9652389287948608
+          },
+          {
+            "word": "也",
+            "start": 8.12,
+            "end": 8.54,
+            "probability": 0.5430667996406555
+          },
+          {
+            "word": "聊",
+            "start": 8.54,
+            "end": 8.72,
+            "probability": 0.994694173336029
+          },
+          {
+            "word": "聊",
+            "start": 8.72,
+            "end": 8.88,
+            "probability": 0.9724268317222595
+          },
+          {
+            "word": "你的",
+            "start": 8.88,
+            "end": 9.12,
+            "probability": 0.983274519443512
+          },
+          {
+            "word": "故",
+            "start": 9.12,
+            "end": 9.4,
+            "probability": 0.9991660118103027
+          },
+          {
+            "word": "事",
+            "start": 9.4,
+            "end": 9.64,
+            "probability": 0.9996378421783447
+          }
+        ],
+        "asr_start": 4.52,
+        "asr_end": 9.64,
+        "speech_timing_description": "ASR 估计 4.52–9.64 秒（跨度 5.12 秒）",
+        "visual_observation": "抽查帧中保持了书斋构图、持书动作和对镜头说话；面部轮廓、口部动作与发丝局部细节和原精度组有细微差别。",
+        "audio_signal": {
+          "peak": 0.9693443775177002,
+          "samples_at_or_above_full_scale": 0,
+          "first_five_seconds_rms": 0.0929427519440651,
+          "final_five_seconds_rms": 0.22446703910827637,
+          "finite": true
+        }
+      }
+    ],
+    "visual_review_scope": "Observed six source frames at 0.5, 2.5, 4.5, 5.5, 7.5 and 9.5 seconds and full-resolution 7.5-second frames. No frame-by-frame lip-sync or perceptual ranking is claimed.",
+    "name_transcription_note": "The requested name is 知微; Whisper transcribes the homophone 芝薇. This alone does not establish a spoken pronunciation error."
+  },
+  "model_files": {
+    "lightx2v_ref2va_turbo_adapter": {
+      "filename": "minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors",
+      "bytes": 1383677768,
+      "sha256": "9e642fc8749c74f8da5e2382877ab5c7aa37b9a73b7fd0d6d457bd1b3cb1ae99"
+    },
+    "base_model_index": {
+      "filename": "model_index.json",
+      "bytes": 707,
+      "sha256": "b160b13700bf08aea7fce1bc3dd0d3a49ea15036298c50082ec107f87843b90c"
+    },
+    "base_transformer_config": {
+      "filename": "config.json",
+      "bytes": 604,
+      "sha256": "f619093a231fcfbcc3d035bec26c50ad864e7331a500d5c519f5045dc1e50458"
+    },
+    "four_step_model_index": {
+      "filename": "model_index.json",
+      "bytes": 789,
+      "sha256": "15477c22a5021179b36439c27e63672c5c5b29e5f4bc11bd50e011c91ae9e973"
+    }
+  },
+  "interpretation": [
+    "Original means original checkpoint and inference precision, executed through the local native vLLM-Omni port; it does not mean stock Diffusers execution.",
+    "Original precision arms use TP8/SP1; the deployed configuration uses TP1/SP8. Timings are observations of these exact setups, not an isolated quantization speedup.",
+    "Both original arms use BF16 DiT, dense BF16 cuDNN attention, FP32 full video and audio VAEs, and no approximate denoising cache.",
+    "The deployed arm uses the captured production source, four-step LoRA, MXFP8 DiT, dense Sage attention and NVFP4 full video VAE; audio VAE remains FP32.",
+    "The saved live VAE shape allowlist rejected a single 10-second request. An isolated source copy adds only 72 to its permitted latent lengths (14 windows, 243 frames). Weights, numerical paths and runtime audits remain unchanged; see qualification.json for the exact one-line adaptation and hashes.",
+    "All three samples start from one clean reference, with no external audio reference or incoming continuation tail. This evaluates a single 10-second generation, not long-stream drift.",
+    "Native 243-frame outputs last 10.125 seconds. Previews contain the first 240 frames, re-encoded identically without frame interpolation, enhancement or retiming.",
+    "One prompt and seed do not establish general quality; a 50-step generated sample is not a ground-truth video."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "input_equality": "PASS",
+  "raw_av_decode": "PASS",
+  "arms": [
+    {
+      "arm": "lightx2v-original-4step",
+      "execution": {
+        "denoiser_steps": 4,
+        "per_step_completed_rank_calls": {
+          "1": 16,
+          "2": 16,
+          "3": 16,
+          "4": 16
+        },
+        "quantization_configuration": "none",
+        "attention": "CUDNN_ATTN BF16"
+      },
+      "source_pipeline_sha256": "28457a7c80da480226b97e224cf3653b2f6d94e486ac2f6dd2c9141032b65034",
+      "video_sha256": "8ea96bc1e98de5d9b25fd6e21657768e036551f92c793130107ca0e7c2824c08",
+      "reference_sha256": "8db8820f82cb14799e52343a5581502e0f62239237e4883205ca3462b1672c15",
+      "prompt_sha256": "b82c82c2e0d6a066a02261977cba57866b68b5c60426009c5769b80daa3ce218",
+      "audio_sample_rate": 32000,
+      "audio_bitrate": 129024,
+      "output_audio_gain_db": 0
+    },
+    {
+      "arm": "minimax-original-50step",
+      "execution": {
+        "denoiser_steps": 50,
+        "per_step_completed_rank_calls": {
+          "1": 16,
+          "2": 16,
+          "3": 16,
+          "4": 16,
+          "5": 16,
+          "6": 16,
+          "7": 16,
+          "8": 16,
+          "9": 16,
+          "10": 16,
+          "11": 16,
+          "12": 16,
+          "13": 16,
+          "14": 16,
+          "15": 16,
+          "16": 16,
+          "17": 16,
+          "18": 16,
+          "19": 16,
+          "20": 16,
+          "21": 16,
+          "22": 16,
+          "23": 16,
+          "24": 16,
+          "25": 16,
+          "26": 16,
+          "27": 16,
+          "28": 16,
+          "29": 16,
+          "30": 16,
+          "31": 16,
+          "32": 16,
+          "33": 16,
+          "34": 16,
+          "35": 16,
+          "36": 16,
+          "37": 16,
+          "38": 16,
+          "39": 16,
+          "40": 16,
+          "41": 16,
+          "42": 16,
+          "43": 16,
+          "44": 16,
+          "45": 16,
+          "46": 16,
+          "47": 16,
+          "48": 16,
+          "49": 16,
+          "50": 16
+        },
+        "quantization_configuration": "none",
+        "attention": "CUDNN_ATTN BF16"
+      },
+      "source_pipeline_sha256": "28457a7c80da480226b97e224cf3653b2f6d94e486ac2f6dd2c9141032b65034",
+      "video_sha256": "9f08fcd24681f7d8e71fbab3fcd0fcb84772aa38fd79fb58dde01b8972e98cff",
+      "reference_sha256": "8db8820f82cb14799e52343a5581502e0f62239237e4883205ca3462b1672c15",
+      "prompt_sha256": "b82c82c2e0d6a066a02261977cba57866b68b5c60426009c5769b80daa3ce218",
+      "audio_sample_rate": 32000,
+      "audio_bitrate": 129302,
+      "output_audio_gain_db": 0
+    },
+    {
+      "arm": "deployed-4step",
+      "execution": {
+        "denoiser_steps": 4,
+        "attention_rank_audits": 16,
+        "attention": "Dense Sage, 50 calls per step per rank",
+        "dit": "MXFP8",
+        "video_vae": "NVFP4",
+        "vae_dispatch_rank_audits": 16,
+        "ten_second_adaptation": {
+          "reason": "Allow the requested 72-token / 243-frame geometry in the saved live VAE. The existing paired schedule derives 14 windows of 17 useful frames plus a 5-frame tail. All computation, precision and runtime dispatch checks remain enabled.",
+          "changed_files": [
+            "vllm_omni/diffusion/models/minimax_h3/short_window_experiment.py"
+          ],
+          "before_sha256": "7f671f6bf799eb4f8c30cb9aef7f1d932df130590f8dd1118dddc1e84e475676",
+          "after_sha256": "1db08d7157e3e382f3ece7c0893fc71479750a5e21acac00fd4bc7023c38adf5",
+          "diff": "- return (17, 22, 37, 42, 107) if enabled() else (37, 42, 107)\n+ return (17, 22, 37, 42, 72, 107) if enabled() else (37, 42, 107)"
+        }
+      },
+      "source_pipeline_sha256": "4047e189d3003c2f58631f7293effce6e17fdc08f0fedde6ed23ba9cfe43b716",
+      "video_sha256": "5854351ab922bf477201024e3f090240bff1fc7eec23bf5e903670559d6185d8",
+      "reference_sha256": "8db8820f82cb14799e52343a5581502e0f62239237e4883205ca3462b1672c15",
+      "prompt_sha256": "b82c82c2e0d6a066a02261977cba57866b68b5c60426009c5769b80daa3ce218",
+      "audio_sample_rate": 32000,
+      "audio_bitrate": 182957,
+      "output_audio_gain_db": -3
+    }
+  ]
+}
