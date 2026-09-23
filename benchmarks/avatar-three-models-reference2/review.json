@@ -1,0 +1,340 @@
+{
+  "scope": "CPU Whisper small word timestamps and full decoded audio diagnostics; not a lip-sync or human listening score. Decoded AAC samples above full scale can be codec overshoot and do not alone prove waveform clipping. Visual observations inspect six source frames per arm (0.5, 2.5, 4.5, 5.5, 7.5 and 9.5 seconds); proper-name spellings are ASR output, not a verified pronunciation error.",
+  "expected_dialogue": "你好，我是知微。今天陪你读书，也聊聊你的故事。",
+  "target_speech_interval_seconds": [
+    5,
+    10
+  ],
+  "arms": [
+    {
+      "id": "lightx2v-original-4step",
+      "label": "LightX2V 原精度四步",
+      "recognized": "你好 我是芝薇今天陪你读书也聊聊你的故事",
+      "words": [
+        {
+          "word": "你好",
+          "start": 4.460000000000001,
+          "end": 4.98,
+          "probability": 0.468161940574646
+        },
+        {
+          "word": " 我是",
+          "start": 4.98,
+          "end": 5.5,
+          "probability": 0.7206525802612305
+        },
+        {
+          "word": "芝",
+          "start": 5.5,
+          "end": 5.84,
+          "probability": 0.7214449346065521
+        },
+        {
+          "word": "薇",
+          "start": 5.84,
+          "end": 5.94,
+          "probability": 0.8910984992980957
+        },
+        {
+          "word": "今天",
+          "start": 6.6000000000000005,
+          "end": 7.12,
+          "probability": 0.6985118389129639
+        },
+        {
+          "word": "陪",
+          "start": 7.12,
+          "end": 7.3,
+          "probability": 0.9931080043315887
+        },
+        {
+          "word": "你",
+          "start": 7.3,
+          "end": 7.5,
+          "probability": 0.9807112812995911
+        },
+        {
+          "word": "读",
+          "start": 7.5,
+          "end": 7.62,
+          "probability": 0.7816160023212433
+        },
+        {
+          "word": "书",
+          "start": 7.62,
+          "end": 8.0,
+          "probability": 0.9993934035301208
+        },
+        {
+          "word": "也",
+          "start": 8.0,
+          "end": 8.52,
+          "probability": 0.5443407893180847
+        },
+        {
+          "word": "聊",
+          "start": 8.52,
+          "end": 8.7,
+          "probability": 0.9916449189186096
+        },
+        {
+          "word": "聊",
+          "start": 8.7,
+          "end": 8.86,
+          "probability": 0.9798868894577026
+        },
+        {
+          "word": "你的",
+          "start": 8.86,
+          "end": 9.12,
+          "probability": 0.9922010898590088
+        },
+        {
+          "word": "故",
+          "start": 9.12,
+          "end": 9.4,
+          "probability": 0.9988248944282532
+        },
+        {
+          "word": "事",
+          "start": 9.4,
+          "end": 9.6,
+          "probability": 0.9994959831237793
+        }
+      ],
+      "asr_start": 4.460000000000001,
+      "asr_end": 9.6,
+      "speech_timing_description": "ASR 估计 4.46–9.60 秒（跨度 5.14 秒）",
+      "visual_observation": "抽帧可见由低头读书转为面对镜头，4.5 秒时已张口。后半段口部动作和微笑较明显，书本、服饰与桌面茶具保持可辨认。",
+      "audio_signal": {
+        "peak": 1.3414987325668335,
+        "samples_at_or_above_full_scale": 1020,
+        "first_five_seconds_rms": 0.1280062198638916,
+        "final_five_seconds_rms": 0.30663004517555237,
+        "finite": true
+      }
+    },
+    {
+      "id": "minimax-original-50step",
+      "label": "MiniMax-H3 原版 50 步",
+      "recognized": "你好 我是芝薇今天陪你读书也聊聊你的故事",
+      "words": [
+        {
+          "word": "你好",
+          "start": 4.440000000000001,
+          "end": 4.960000000000001,
+          "probability": 0.5100014805793762
+        },
+        {
+          "word": " 我是",
+          "start": 4.960000000000001,
+          "end": 5.48,
+          "probability": 0.7007771134376526
+        },
+        {
+          "word": "芝",
+          "start": 5.48,
+          "end": 5.84,
+          "probability": 0.7508285343647003
+        },
+        {
+          "word": "薇",
+          "start": 5.84,
+          "end": 5.92,
+          "probability": 0.8969546854496002
+        },
+        {
+          "word": "今天",
+          "start": 6.6000000000000005,
+          "end": 7.12,
+          "probability": 0.7370511889457703
+        },
+        {
+          "word": "陪",
+          "start": 7.12,
+          "end": 7.3,
+          "probability": 0.9939956068992615
+        },
+        {
+          "word": "你",
+          "start": 7.3,
+          "end": 7.5,
+          "probability": 0.9851073622703552
+        },
+        {
+          "word": "读",
+          "start": 7.5,
+          "end": 7.62,
+          "probability": 0.8739420771598816
+        },
+        {
+          "word": "书",
+          "start": 7.62,
+          "end": 8.0,
+          "probability": 0.9994166195392609
+        },
+        {
+          "word": "也",
+          "start": 8.0,
+          "end": 8.52,
+          "probability": 0.5786786079406738
+        },
+        {
+          "word": "聊",
+          "start": 8.52,
+          "end": 8.7,
+          "probability": 0.9862059950828552
+        },
+        {
+          "word": "聊",
+          "start": 8.7,
+          "end": 8.86,
+          "probability": 0.9825882911682129
+        },
+        {
+          "word": "你的",
+          "start": 8.86,
+          "end": 9.12,
+          "probability": 0.9916279315948486
+        },
+        {
+          "word": "故",
+          "start": 9.12,
+          "end": 9.38,
+          "probability": 0.9988558292388916
+        },
+        {
+          "word": "事",
+          "start": 9.38,
+          "end": 9.58,
+          "probability": 0.9994003772735596
+        }
+      ],
+      "asr_start": 4.440000000000001,
+      "asr_end": 9.58,
+      "speech_timing_description": "ASR 估计 4.44–9.58 秒（跨度 5.14 秒）",
+      "visual_observation": "抽帧可见先低头读书，再抬头面对镜头；4.5 秒时已张口，后半段保持正面交流姿态。书本和双手持续可见，窗格、茶具及衣袖纹理保持可辨认。",
+      "audio_signal": {
+        "peak": 1.3102874755859375,
+        "samples_at_or_above_full_scale": 857,
+        "first_five_seconds_rms": 0.12457426637411118,
+        "final_five_seconds_rms": 0.2986317276954651,
+        "finite": true
+      }
+    },
+    {
+      "id": "deployed-4step",
+      "label": "上线四步配置",
+      "recognized": "您好,我是芝薇。今天陪你读书,也聊聊你的故事。",
+      "words": [
+        {
+          "word": "您",
+          "start": 4.0200000000000005,
+          "end": 4.5,
+          "probability": 0.1568136364221573
+        },
+        {
+          "word": "好,",
+          "start": 4.5,
+          "end": 4.72,
+          "probability": 0.9907346963882446
+        },
+        {
+          "word": "我是",
+          "start": 5.34,
+          "end": 5.5,
+          "probability": 0.961224377155304
+        },
+        {
+          "word": "芝",
+          "start": 5.5,
+          "end": 5.86,
+          "probability": 0.6725572794675827
+        },
+        {
+          "word": "薇。",
+          "start": 5.86,
+          "end": 5.92,
+          "probability": 0.928257554769516
+        },
+        {
+          "word": "今天",
+          "start": 6.84,
+          "end": 7.12,
+          "probability": 0.9649995565414429
+        },
+        {
+          "word": "陪",
+          "start": 7.12,
+          "end": 7.32,
+          "probability": 0.9912581145763397
+        },
+        {
+          "word": "你",
+          "start": 7.32,
+          "end": 7.5,
+          "probability": 0.8851830363273621
+        },
+        {
+          "word": "读",
+          "start": 7.5,
+          "end": 7.64,
+          "probability": 0.8993741571903229
+        },
+        {
+          "word": "书,",
+          "start": 7.64,
+          "end": 8.02,
+          "probability": 0.9991107285022736
+        },
+        {
+          "word": "也",
+          "start": 8.42,
+          "end": 8.56,
+          "probability": 0.9915772676467896
+        },
+        {
+          "word": "聊",
+          "start": 8.56,
+          "end": 8.7,
+          "probability": 0.9841914176940918
+        },
+        {
+          "word": "聊",
+          "start": 8.7,
+          "end": 8.86,
+          "probability": 0.983761727809906
+        },
+        {
+          "word": "你的",
+          "start": 8.86,
+          "end": 9.12,
+          "probability": 0.9728408455848694
+        },
+        {
+          "word": "故",
+          "start": 9.12,
+          "end": 9.42,
+          "probability": 0.9982847571372986
+        },
+        {
+          "word": "事。",
+          "start": 9.42,
+          "end": 9.6,
+          "probability": 0.9994165897369385
+        }
+      ],
+      "asr_start": 4.0200000000000005,
+      "asr_end": 9.6,
+      "speech_timing_description": "ASR 估计 4.02–9.60 秒（跨度 5.58 秒）",
+      "visual_observation": "抽帧可见先读书，再面对镜头开口；后半段有明显口部动作与微笑。书本、衣袖、桌面物件保持可辨认；抽帧不能单独证明连续口型同步。",
+      "audio_signal": {
+        "peak": 0.9385237097740173,
+        "samples_at_or_above_full_scale": 0,
+        "first_five_seconds_rms": 0.08741135150194168,
+        "final_five_seconds_rms": 0.213079035282135,
+        "finite": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Zhiwei, the adult East Asian woman in <Picture 1>. Preserve her face, long dark half-up hair, dark green embroidered robe with pale inner collar, and seated position. <Picture 1> also fixes the wooden study, closed lattice windows, table, book in her hands, tea set, incense burner, small plate of sweets, CUDA book and portrait scroll.
+
+summary:
+[reference generation] A single continuous ten-second photorealistic shot: Zhiwei quietly reads for the first five seconds, then looks directly into the camera and speaks to the viewer for the final five seconds.
+
+retention_analysis:
+Preserve the same woman, hairstyle, clothing, room, warm daylight and arrangement of all objects throughout. The book remains held in both hands. The windows remain closed. Camera framing stays at the reference's medium shot, with her face and hands clearly visible.
+
+detailed_description:
+Natural live-action skin texture, stable warm side light, fine hair strands, distinct embroidered fabric and coherent fingers. A completely locked camera at eye level, no cuts, zoom or camera movement.
+[Shot 1, 00:00.000-00:04.300] Zhiwei sits in the same chair and reads the open book silently. Her lips stay closed. She breathes naturally and blinks once. Her hands hold the book steadily, and the tea set remains untouched.
+[Shot 1, 00:04.300-00:05.000] Without moving her torso or hands, she gently raises her eyes and turns her face toward the camera, establishing direct eye contact. She remains silent until five seconds.
+[Shot 1, 00:05.000-00:10.000] Keeping direct eye contact and the book in both hands, Zhiwei speaks clearly in a warm, calm adult female Mandarin voice: <d>[Chinese] 你好，我是知微。今天陪你读书，也聊聊你的故事。</d> She speaks at an even, unhurried conversational pace across these five seconds. Her mouth movements follow the actual words. She finishes the whole sentence and settles into a relaxed closed-mouth expression at the end.
+
+overall_soundscape:
+Quiet indoor room tone during the first five seconds. Only Zhiwei speaks from five to ten seconds, in clear Mandarin, with a close natural voice, synchronized lips and no singing or extra words. No second speaker or voice-over.
+
+non_diegetic_music:
+None. No subtitles, captions or added interface graphics. Keep the reference's existing book and scroll as stationary scene details.
