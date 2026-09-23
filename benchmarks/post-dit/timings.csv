@@ -1,0 +1,82 @@
+campaign,configuration,repeat,boundary,seconds
+scheduling_15s,Contemporary baseline,1,HTTP_to_complete_MP4,15.19
+scheduling_15s,Contemporary baseline,2,HTTP_to_complete_MP4,15.24
+scheduling_15s,Contemporary baseline,3,HTTP_to_complete_MP4,15.354
+scheduling_15s,Cached constants,1,HTTP_to_complete_MP4,15.14
+scheduling_15s,Cached constants,2,HTTP_to_complete_MP4,15.191
+scheduling_15s,Cached constants,3,HTTP_to_complete_MP4,15.279
+scheduling_15s,Cache + early first-window assembly,1,HTTP_to_complete_MP4,15.13
+scheduling_15s,Cache + early first-window assembly,2,HTTP_to_complete_MP4,15.186
+scheduling_15s,Cache + early first-window assembly,3,HTTP_to_complete_MP4,15.231
+scheduling_15s,Cache + early AAC,1,HTTP_to_complete_MP4,15.028
+scheduling_15s,Cache + early AAC,2,HTTP_to_complete_MP4,15.044
+scheduling_15s,Cache + early AAC,3,HTTP_to_complete_MP4,15.127
+scheduling_15s,Cache + early assembly + early AAC,1,HTTP_to_complete_MP4,15.026
+scheduling_15s,Cache + early assembly + early AAC,2,HTTP_to_complete_MP4,15.056
+scheduling_15s,Cache + early assembly + early AAC,3,HTTP_to_complete_MP4,15.102
+output_fusion_15s,baseline,1,HTTP_to_complete_MP4,13.303
+output_fusion_15s,baseline,2,HTTP_to_complete_MP4,13.334
+output_fusion_15s,baseline,3,HTTP_to_complete_MP4,13.362
+output_fusion_15s,output_fused,1,HTTP_to_complete_MP4,13.212
+output_fusion_15s,output_fused,2,HTTP_to_complete_MP4,13.261
+output_fusion_15s,output_fused,3,HTTP_to_complete_MP4,13.336
+single_gpu_one_window,stock,1,CUDA_event,2.2650908203125
+single_gpu_one_window,stock,2,CUDA_event,2.27623291015625
+single_gpu_one_window,stock,3,CUDA_event,2.280409423828125
+single_gpu_one_window,stock,4,CUDA_event,2.282058349609375
+single_gpu_one_window,stock,5,CUDA_event,2.2862763671875
+single_gpu_one_window,stock,6,CUDA_event,2.288383056640625
+single_gpu_one_window,stock,7,CUDA_event,2.290775390625
+single_gpu_one_window,stock,8,CUDA_event,2.295030029296875
+single_gpu_one_window,stock,9,CUDA_event,2.29815283203125
+single_gpu_one_window,stock,10,CUDA_event,2.299015625
+single_gpu_one_window,forced_exact_ops,1,CUDA_event,1.7077625732421875
+single_gpu_one_window,forced_exact_ops,2,CUDA_event,1.721424560546875
+single_gpu_one_window,forced_exact_ops,3,CUDA_event,1.7217900390625
+single_gpu_one_window,forced_exact_ops,4,CUDA_event,1.72272412109375
+single_gpu_one_window,forced_exact_ops,5,CUDA_event,1.7245223388671875
+single_gpu_one_window,forced_exact_ops,6,CUDA_event,1.724656982421875
+single_gpu_one_window,forced_exact_ops,7,CUDA_event,1.7231512451171875
+single_gpu_one_window,forced_exact_ops,8,CUDA_event,1.72373388671875
+single_gpu_one_window,forced_exact_ops,9,CUDA_event,1.7245509033203126
+single_gpu_one_window,forced_exact_ops,10,CUDA_event,1.7259754638671876
+five_second_768p,request_seconds,1,HTTP_to_MP4,4.659823487047106
+five_second_768p,backpressure,1,overlapping_log_scope,0.0
+five_second_768p,d2h_wait,1,overlapping_log_scope,0.207
+five_second_768p,video_encode_mux,1,overlapping_log_scope,0.202
+five_second_768p,audio_finalize,1,overlapping_log_scope,0.006
+five_second_768p,pipeline,1,overlapping_log_scope,0.659
+five_second_768p,aac_background_encode_seconds,1,overlapping_log_scope,0.07635590294376016
+five_second_768p,aac_join_seconds,1,overlapping_log_scope,3.959983587265015e-06
+five_second_768p,request_seconds,2,HTTP_to_MP4,4.66123240115121
+five_second_768p,backpressure,2,overlapping_log_scope,0.0
+five_second_768p,d2h_wait,2,overlapping_log_scope,0.206
+five_second_768p,video_encode_mux,2,overlapping_log_scope,0.176
+five_second_768p,audio_finalize,2,overlapping_log_scope,0.004
+five_second_768p,pipeline,2,overlapping_log_scope,0.652
+five_second_768p,aac_background_encode_seconds,2,overlapping_log_scope,0.07797692390158772
+five_second_768p,aac_join_seconds,2,overlapping_log_scope,6.010057404637337e-06
+five_second_768p,request_seconds,3,HTTP_to_MP4,4.67330171703361
+five_second_768p,backpressure,3,overlapping_log_scope,0.0
+five_second_768p,d2h_wait,3,overlapping_log_scope,0.208
+five_second_768p,video_encode_mux,3,overlapping_log_scope,0.194
+five_second_768p,audio_finalize,3,overlapping_log_scope,0.004
+five_second_768p,pipeline,3,overlapping_log_scope,0.656
+five_second_768p,aac_background_encode_seconds,3,overlapping_log_scope,0.07523407298140228
+five_second_768p,aac_join_seconds,3,overlapping_log_scope,5.3399708122015e-06
+five_second_768p,request_seconds,4,HTTP_to_MP4,4.682930525857955
+five_second_768p,backpressure,4,overlapping_log_scope,0.0
+five_second_768p,d2h_wait,4,overlapping_log_scope,0.208
+five_second_768p,video_encode_mux,4,overlapping_log_scope,0.192
+five_second_768p,audio_finalize,4,overlapping_log_scope,0.004
+five_second_768p,pipeline,4,overlapping_log_scope,0.657
+five_second_768p,aac_background_encode_seconds,4,overlapping_log_scope,0.07670996594242752
+five_second_768p,aac_join_seconds,4,overlapping_log_scope,5.569076165556908e-06
+five_second_768p,request_seconds,5,HTTP_to_MP4,4.69424985605292
+five_second_768p,backpressure,5,overlapping_log_scope,0.0
+five_second_768p,d2h_wait,5,overlapping_log_scope,0.208
+five_second_768p,video_encode_mux,5,overlapping_log_scope,0.208
+five_second_768p,audio_finalize,5,overlapping_log_scope,0.005
+five_second_768p,pipeline,5,overlapping_log_scope,0.661
+five_second_768p,aac_background_encode_seconds,5,overlapping_log_scope,0.07664194703102112
+five_second_768p,aac_join_seconds,5,overlapping_log_scope,4.320172592997551e-06
