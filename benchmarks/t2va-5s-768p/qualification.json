@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "arms": [
+    {
+      "arm": "all_mxfp8",
+      "status": "PASS",
+      "checks": {
+        "H3_PRECISION_SCHEDULE_READY": {
+          "count": 8,
+          "status": "PASS"
+        },
+        "H3_PRECISION_SCHEDULE_NFE": {
+          "count": 224,
+          "status": "PASS"
+        },
+        "H3_OPRODUCER_RAW_GATE": {
+          "count": 400,
+          "status": "PASS"
+        },
+        "H3_VAE_NVFP4_COMPLETE": {
+          "count": 56,
+          "status": "PASS"
+        },
+        "H3_VAE_PAIR_COMPLETE": {
+          "count": 56,
+          "status": "PASS"
+        },
+        "H3_VAE_FUSED_BLEND": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_VAE_FUSED_RGB": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_FULL_VAE_EARLY_AAC": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_PRECISION_SPLIT_RAW_GATE": {
+          "count": 400,
+          "status": "PASS"
+        }
+      },
+      "all_requests_exclusive_eight_gpus": true,
+      "geometry": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "seconds": 5.166666666666667,
+        "text_tokens": 457,
+        "audio_tokens": 414,
+        "video_shape": [
+          37,
+          24,
+          42
+        ],
+        "prefix": [
+          457,
+          414
+        ],
+        "prefix_tiles": 15,
+        "video_tiles": 660,
+        "topk": 66,
+        "compact_rows": 38167,
+        "aligned_rows": 38208,
+        "local_rows": 4776,
+        "padded_rows": 43200,
+        "chunk_rows": 1194,
+        "kmax": 132,
+        "owner_tile_counts": [
+          81,
+          121,
+          132,
+          132,
+          132,
+          132,
+          121,
+          132
+        ],
+        "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3"
+      },
+      "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3",
+      "source_manifest_sha256": "cde5ef7f3d9f8112067fc990777aeb2b0d137ac252c8fa49189f0b92d9bb212c",
+      "projection_modules": 200,
+      "retained_original_bf16_modules": 0,
+      "original_bf16_resident_blocks": null,
+      "host_bf16_modules": 0,
+      "warmup_blend_float_byte_checks": 321,
+      "warmup_rgb_byte_checks": 8
+    },
+    {
+      "arm": "first_step_bf16",
+      "status": "PASS",
+      "checks": {
+        "H3_PRECISION_SCHEDULE_READY": {
+          "count": 8,
+          "status": "PASS"
+        },
+        "H3_PRECISION_SCHEDULE_NFE": {
+          "count": 224,
+          "status": "PASS"
+        },
+        "H3_OPRODUCER_RAW_GATE": {
+          "count": 400,
+          "status": "PASS"
+        },
+        "H3_VAE_NVFP4_COMPLETE": {
+          "count": 56,
+          "status": "PASS"
+        },
+        "H3_VAE_PAIR_COMPLETE": {
+          "count": 56,
+          "status": "PASS"
+        },
+        "H3_VAE_FUSED_BLEND": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_VAE_FUSED_RGB": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_FULL_VAE_EARLY_AAC": {
+          "count": 7,
+          "status": "PASS"
+        },
+        "H3_PRECISION_SPLIT_RAW_GATE": {
+          "count": 800,
+          "status": "PASS"
+        }
+      },
+      "all_requests_exclusive_eight_gpus": true,
+      "geometry": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "seconds": 5.166666666666667,
+        "text_tokens": 457,
+        "audio_tokens": 414,
+        "video_shape": [
+          37,
+          24,
+          42
+        ],
+        "prefix": [
+          457,
+          414
+        ],
+        "prefix_tiles": 15,
+        "video_tiles": 660,
+        "topk": 66,
+        "compact_rows": 38167,
+        "aligned_rows": 38208,
+        "local_rows": 4776,
+        "padded_rows": 43200,
+        "chunk_rows": 1194,
+        "kmax": 132,
+        "owner_tile_counts": [
+          81,
+          121,
+          132,
+          132,
+          132,
+          132,
+          121,
+          132
+        ],
+        "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3"
+      },
+      "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3",
+      "source_manifest_sha256": "cde5ef7f3d9f8112067fc990777aeb2b0d137ac252c8fa49189f0b92d9bb212c",
+      "projection_modules": 200,
+      "retained_original_bf16_modules": 200,
+      "original_bf16_resident_blocks": 24,
+      "host_bf16_modules": 104,
+      "warmup_blend_float_byte_checks": 321,
+      "warmup_rgb_byte_checks": 8
+    }
+  ]
+}

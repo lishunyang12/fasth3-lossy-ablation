@@ -1,0 +1,144 @@
+{
+  "date": "2026-09-23",
+  "model": "MiniMax-H3 FL2VA + FastH3 vsa-datafree student",
+  "task": "t2va",
+  "seed": 1101,
+  "steps": 4,
+  "geometry": {
+    "width": 1344,
+    "height": 768,
+    "frames": 124,
+    "fps": 24,
+    "seconds": 5.166666666666667,
+    "text_tokens": 457,
+    "audio_tokens": 414,
+    "video_shape": [
+      37,
+      24,
+      42
+    ],
+    "prefix": [
+      457,
+      414
+    ],
+    "prefix_tiles": 15,
+    "video_tiles": 660,
+    "topk": 66,
+    "compact_rows": 38167,
+    "aligned_rows": 38208,
+    "local_rows": 4776,
+    "padded_rows": 43200,
+    "chunk_rows": 1194,
+    "kmax": 132,
+    "owner_tile_counts": [
+      81,
+      121,
+      132,
+      132,
+      132,
+      132,
+      121,
+      132
+    ],
+    "prompt_sha256": "5abb96b31333eea455c241aa17e61d1eaf75d7e78625c80f17302b34ce11fad3"
+  },
+  "timing_boundary": "HTTP request submission to complete MP4 response bytes; excludes loading, warmup and post-response file validation",
+  "sample_policy": "Two warmups, five sequential formal requests per arm; fixed seed and prompt. Published video is formal repeat 1.",
+  "arms": [
+    {
+      "key": "fastest",
+      "label": "最快方案",
+      "arm": "all_mxfp8",
+      "request_seconds": [
+        4.668449042132124,
+        4.667934790952131,
+        4.6809148490428925,
+        4.68076366209425,
+        4.69352346402593
+      ],
+      "median_seconds": 4.68076366209425,
+      "min_seconds": 4.667934790952131,
+      "max_seconds": 4.69352346402593,
+      "median_rtf": 0.9059542571795323,
+      "under_5": 5,
+      "under_playback": 5,
+      "warmup_seconds": [
+        12.900286988122389,
+        4.69785589305684
+      ],
+      "load_seconds": 142.10446464712732,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.175,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 10206291,
+        "sha256": "d4901bef7a356fdfc4cc1505629988e4d993db6744f61bf7aeb876ad126f35bd",
+        "decode": "PASS"
+      }
+    },
+    {
+      "key": "first-step-bf16",
+      "label": "首步回退",
+      "arm": "first_step_bf16",
+      "request_seconds": [
+        5.205809125909582,
+        5.209279254078865,
+        5.220295866951346,
+        5.25953430403024,
+        5.2396815901156515
+      ],
+      "median_seconds": 5.220295866951346,
+      "min_seconds": 5.205809125909582,
+      "max_seconds": 5.25953430403024,
+      "median_rtf": 1.0103798452163895,
+      "under_5": 0,
+      "under_playback": 0,
+      "warmup_seconds": [
+        15.69795120600611,
+        5.226529722800478
+      ],
+      "load_seconds": 166.11001785215922,
+      "published_repeat": 1,
+      "media": {
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "fps": 24,
+        "video_seconds": 5.166667,
+        "audio_seconds": 5.175,
+        "audio_rate": 32000,
+        "audio_channels": 2,
+        "bytes": 10141455,
+        "sha256": "5dd445775169e2722972e8a6982ce5e61ae7fe233ba46c71e1d3992e2c6f7c15",
+        "decode": "PASS"
+      }
+    }
+  ],
+  "common": {
+    "video_vae": "NVFP4",
+    "audio_vae": "native, unchanged",
+    "transport": "BF16 RDMA, TP1/SP8",
+    "vsa_topk": 66,
+    "vsa_video_tiles": 660,
+    "flow_shift": 12,
+    "audio_flow_shift": 3
+  },
+  "first_step_bf16": {
+    "projections": "original student-fused BF16 tensors retained before quantization",
+    "attention": "FlashInfer BF16 VSA, same sparse mask; distinct from the older gallery Triton provider",
+    "weight_residency": "first 24 blocks on GPU, last 26 blocks pinned CPU with double-buffered prefetch; transfer included in request timing"
+  },
+  "caveats": [
+    "One prompt and seed; five requests per arm are not a production latency percentile study.",
+    "A 5-second request maps to 124 frames, 5.166667 seconds.",
+    "The original prompt is unchanged and includes a shot at 6.6 seconds that is beyond this output window.",
+    "Both arms use lossy NVFP4 video VAE; first-step rollback does not restore an all-BF16 pipeline.",
+    "Quality is presented through original outputs; no subjective quality ranking or all-BF16-reference PSNR is claimed."
+  ]
+}
