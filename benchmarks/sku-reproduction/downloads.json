@@ -12,16 +12,24 @@
     "sha256": "f6c061657a84a774abdd88cf5017165533806abe81c4dd7cdee83a79fa96e4c7"
   },
   "h3-5s-15s-reproduction.zip": {
-    "bytes": 62387882,
-    "sha256": "e187525a95393f45d1b69f5f1574420036e771ccd483aa44e79560c453d1eb48"
+    "bytes": 62427940,
+    "sha256": "a42f2e72859655b7e473b274086680e63dbd36ebd803e8ee2c4eb91637732957"
   },
   "results.json": {
     "bytes": 11869,
-    "sha256": "c028b265b749f4925df2481e13e6ca4e5f42f652515cf7f72a75ec2dd34c9aa8"
+    "sha256": "7d57ba5192377dad5c4ad4727a5b0e50379c41ecd7e69fd821a76532d92e161b"
   },
   "timings.csv": {
     "bytes": 4289,
     "sha256": "7ed3f1cf4676a0a232a4d0126b77a1bf3bb8058e496346cf363e0d6ae9760c31"
+  },
+  "tradeoff-history.json": {
+    "bytes": 78257,
+    "sha256": "514a8b261bcc3730669cd55deab607046b75ffa51b5f5181a939d4a4fced2efe"
+  },
+  "tradeoff-timings.csv": {
+    "bytes": 6081,
+    "sha256": "1d64cc66d6bff21eddae361f8142c9fd2192ded7b969037b4a94b8ef27c89693"
   },
   "validation.json": {
     "bytes": 1284,
