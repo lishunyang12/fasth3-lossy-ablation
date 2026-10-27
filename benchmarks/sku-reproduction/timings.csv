@@ -1,64 +1,30 @@
 case,gpu_count,gpu,sample,historical_seconds,boundary
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,1,3.5442530040163547,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,2,3.5451254488434643,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,3,3.545881126075983,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,4,3.5540667409077287,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,5,3.547505117021501,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,6,3.8996319340076298,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,7,3.9727099989540875,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,8,3.9779565557837486,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,9,3.9052701250184327,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,10,4.055993593065068,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,11,3.582710525020957,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,12,3.5897789399605244,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,13,3.6023559370078146,historical HTTP; see case protocol
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,1,3.665281177032739,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,2,3.661568744108081,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,3,3.6619727469515055,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,4,3.669778869021684,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,5,3.6664876979775727,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,6,4.028935521142557,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,7,4.093477816786617,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,8,4.096392116043717,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,9,4.029596529901028,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,10,4.177112315082923,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,11,3.6981664272025228,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,12,3.7062881940510124,"avatar application ready, includes checks"
-5s-avatar-ref2va-4step,8,NVIDIA RTX PRO 5000 Blackwell,13,3.719565568957478,"avatar application ready, includes checks"
-15s-4step-mxfp8-sage-nvfp4,8,NVIDIA RTX PRO 5000 Blackwell,1,13.281,historical HTTP; see case protocol
-15s-4step-mxfp8-sage-nvfp4,8,NVIDIA RTX PRO 5000 Blackwell,2,13.304,historical HTTP; see case protocol
-15s-4step-mxfp8-sage-nvfp4,8,NVIDIA RTX PRO 5000 Blackwell,3,13.348,historical HTTP; see case protocol
-15s-4step-output-fusion,8,NVIDIA RTX PRO 5000 Blackwell,1,13.212,historical HTTP; see case protocol
-15s-4step-output-fusion,8,NVIDIA RTX PRO 5000 Blackwell,2,13.261,historical HTTP; see case protocol
-15s-4step-output-fusion,8,NVIDIA RTX PRO 5000 Blackwell,3,13.336,historical HTTP; see case protocol
-5s-8step-bf16-fi,4,NVIDIA RTX PRO 5000 Blackwell,1,52.459026,historical HTTP; see case protocol
-5s-8step-bf16-fi,4,NVIDIA RTX PRO 5000 Blackwell,2,52.645485,historical HTTP; see case protocol
-5s-8step-bf16-fi,4,NVIDIA RTX PRO 5000 Blackwell,3,52.545642,historical HTTP; see case protocol
-5s-8step-qad-fi,4,NVIDIA RTX PRO 5000 Blackwell,1,31.787811,historical HTTP; see case protocol
-5s-8step-qad-fi,4,NVIDIA RTX PRO 5000 Blackwell,2,31.820587,historical HTTP; see case protocol
-5s-8step-qad-fi,4,NVIDIA RTX PRO 5000 Blackwell,3,32.022046,historical HTTP; see case protocol
-5s-8step-qad-8l-fi,4,NVIDIA RTX PRO 5000 Blackwell,1,28.155216,historical HTTP; see case protocol
-5s-8step-qad-8l-fi,4,NVIDIA RTX PRO 5000 Blackwell,2,28.175902,historical HTTP; see case protocol
-5s-8step-qad-8l-fi,4,NVIDIA RTX PRO 5000 Blackwell,3,28.331615,historical HTTP; see case protocol
-5s-8step-bf16-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,1,52.600952,historical HTTP; see case protocol
-5s-8step-bf16-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,2,52.573709,historical HTTP; see case protocol
-5s-8step-bf16-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,3,52.555554,historical HTTP; see case protocol
-5s-8step-bf16-triton,4,NVIDIA RTX PRO 5000 Blackwell,1,60.643493,historical HTTP; see case protocol
-5s-8step-bf16-triton,4,NVIDIA RTX PRO 5000 Blackwell,2,60.577396,historical HTTP; see case protocol
-5s-8step-bf16-triton,4,NVIDIA RTX PRO 5000 Blackwell,3,60.635797,historical HTTP; see case protocol
-5s-8step-qad-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,1,31.762435,historical HTTP; see case protocol
-5s-8step-qad-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,2,31.803127,historical HTTP; see case protocol
-5s-8step-qad-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,3,31.822276,historical HTTP; see case protocol
-5s-8step-qad-8l-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,1,28.200518,historical HTTP; see case protocol
-5s-8step-qad-8l-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,2,28.358301,historical HTTP; see case protocol
-5s-8step-qad-8l-cudnn,4,NVIDIA RTX PRO 5000 Blackwell,3,28.287497,historical HTTP; see case protocol
-5s-t2va-4step-all-mxfp8,8,NVIDIA RTX PRO 5000 Blackwell,1,4.668449042132124,historical HTTP; see case protocol
-5s-t2va-4step-all-mxfp8,8,NVIDIA RTX PRO 5000 Blackwell,2,4.667934790952131,historical HTTP; see case protocol
-5s-t2va-4step-all-mxfp8,8,NVIDIA RTX PRO 5000 Blackwell,3,4.6809148490428925,historical HTTP; see case protocol
-5s-t2va-4step-all-mxfp8,8,NVIDIA RTX PRO 5000 Blackwell,4,4.68076366209425,historical HTTP; see case protocol
-5s-t2va-4step-all-mxfp8,8,NVIDIA RTX PRO 5000 Blackwell,5,4.69352346402593,historical HTTP; see case protocol
-5s-t2va-4step-first-step-bf16,8,NVIDIA RTX PRO 5000 Blackwell,1,5.205809125909582,historical HTTP; see case protocol
-5s-t2va-4step-first-step-bf16,8,NVIDIA RTX PRO 5000 Blackwell,2,5.209279254078865,historical HTTP; see case protocol
-5s-t2va-4step-first-step-bf16,8,NVIDIA RTX PRO 5000 Blackwell,3,5.220295866951346,historical HTTP; see case protocol
-5s-t2va-4step-first-step-bf16,8,NVIDIA RTX PRO 5000 Blackwell,4,5.25953430403024,historical HTTP; see case protocol
-5s-t2va-4step-first-step-bf16,8,NVIDIA RTX PRO 5000 Blackwell,5,5.2396815901156515,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),1,3.5442530040163547,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),2,3.5451254488434643,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),3,3.545881126075983,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),4,3.5540667409077287,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),5,3.547505117021501,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),6,3.8996319340076298,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),7,3.9727099989540875,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),8,3.9779565557837486,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),9,3.9052701250184327,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),10,4.055993593065068,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),11,3.582710525020957,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),12,3.5897789399605244,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),13,3.6023559370078146,historical HTTP; see case protocol
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),1,3.665281177032739,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),2,3.661568744108081,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),3,3.6619727469515055,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),4,3.669778869021684,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),5,3.6664876979775727,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),6,4.028935521142557,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),7,4.093477816786617,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),8,4.096392116043717,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),9,4.029596529901028,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),10,4.177112315082923,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),11,3.6981664272025228,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),12,3.7062881940510124,"avatar application ready, includes checks"
+5s-avatar-ref2va-4step,8,RTX PRO 5000-class Blackwell (historical project designation),13,3.719565568957478,"avatar application ready, includes checks"
+15s-4step-mxfp8-sage-nvfp4,8,RTX PRO 5000-class Blackwell (historical project designation),1,13.281,historical HTTP; see case protocol
+15s-4step-mxfp8-sage-nvfp4,8,RTX PRO 5000-class Blackwell (historical project designation),2,13.304,historical HTTP; see case protocol
+15s-4step-mxfp8-sage-nvfp4,8,RTX PRO 5000-class Blackwell (historical project designation),3,13.348,historical HTTP; see case protocol

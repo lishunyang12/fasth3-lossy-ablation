@@ -2,7 +2,7 @@
   "schema": 1,
   "publication_date": "2026-10-27",
   "source_repository": "https://github.com/lishunyang12/h3-optimizations",
-  "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d",
+  "source_commit": "0648c559d2973eade1f6c4bee531bc73ed92538a",
   "status": "Historical measurements; new launcher CPU/source/log checks passed; no fresh GPU measurements",
   "target_sku_status": "5500 exact hardware and results pending",
   "cases": [
@@ -10,7 +10,8 @@
       "id": "5s-avatar-ref2va-4step",
       "family": "avatar5",
       "gpu_count": 8,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+      "gpu": "RTX PRO 5000-class Blackwell (historical project designation)",
+      "gpu_label_scope": "Project records; some driver inventories report NVIDIA Graphics Device",
       "width": 960,
       "height": 544,
       "frames": 119,
@@ -32,6 +33,7 @@
         3.6023559370078146
       ],
       "median_s": 3.5897789399605244,
+      "mean_s": 3.71717223428333,
       "n": 13,
       "historical": {
         "source": "probe-v4-124 / short-window-20260922",
@@ -97,13 +99,14 @@
         "sequence": true
       },
       "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
+      "source_commit": "0648c559d2973eade1f6c4bee531bc73ed92538a"
     },
     {
       "id": "15s-4step-mxfp8-sage-nvfp4",
       "family": "legacy15",
       "gpu_count": 8,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+      "gpu": "RTX PRO 5000-class Blackwell (historical project designation)",
+      "gpu_label_scope": "Project records; some driver inventories report NVIDIA Graphics Device",
       "width": 1280,
       "height": 704,
       "frames": 362,
@@ -115,6 +118,7 @@
         13.348
       ],
       "median_s": 13.304,
+      "mean_s": 13.311,
       "n": 3,
       "historical": {
         "gpu": "8 x RTX PRO 5000 Blackwell, 72 GiB class",
@@ -151,479 +155,7 @@
         "minimum_memory_mib": 65147
       },
       "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "15s-4step-output-fusion",
-      "family": "legacy15",
-      "gpu_count": 8,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1280,
-      "height": 704,
-      "frames": 362,
-      "duration_seconds": 15.083333333333334,
-      "steps": 4,
-      "samples_s": [
-        13.212,
-        13.261,
-        13.336
-      ],
-      "median_s": 13.261,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          13.212,
-          13.261,
-          13.336
-        ],
-        "median_s": 13.261,
-        "new_harness_rerun_required_for_strict_comparison": true,
-        "evidence": "fasth3-dit-comm-review-20260918/LIVE-RESULTS.zh.md"
-      },
-      "request": {
-        "prompt": "integrated_multimodal_description: [Shot 1] Cinematic live-action fantasy inside a small wooden teahouse suspended beneath a colossal moon, shown in a symmetrical wide shot through open paper doors. An elderly tea master in an indigo robe, with silver hair pinned high and a warm gravelly Mandarin voice (S1), pours glowing tea into two porcelain cups while a young female radio astronomer in a cream flight suit, with a clear fast Mandarin voice (S2), adjusts a brass receiver beside her. The camera pushes in with small amplitude at slow speed as lunar dust drifts upward instead of falling, and the tea master says: <d>[Chinese] 月亮不是沉默，只是等我们听见。</d> [Shot 2] At 00:03.400, the camera cuts to a macro close-up of the tea surface. Concentric ripples become a precise star map, tiny points of light connect across the cup, and the receiver needle snaps toward a distant signal. The astronomer leans into the eyepiece, her face illuminated by moving constellations, and replies: <d>[Chinese] 信号锁定了。</d> [Shot 3] At 00:06.600, the shot cuts outside to a sweeping arc around the teahouse as the vast moon slowly opens into layered mechanical petals, revealing a luminous blue core. The two women step onto the balcony without changing clothes or positions relative to each other; the tea master raises her cup while the astronomer sends one narrow beam from the receiver into the core. The camera pulls out with large amplitude at slow speed until the teahouse becomes a warm point against the unfolding lunar structure.\noverall_soundscape: Porcelain touches wood with delicate clicks above the soft hiss of boiling water and the papery flutter of the doors. A low receiver hum gains harmonics as the signal locks, followed by distant metal plates shifting across the moon and a soft pressure wave moving through airborne dust.\nnon_diegetic_music: Slow guzheng harmonics over sustained glassy synthesizer tones at 68 BPM. A restrained taiko pulse enters when the lunar petals open, then resolves into one long bowed-cymbal shimmer.",
-        "width": "1280",
-        "height": "720",
-        "fps": "24",
-        "num_inference_steps": "4",
-        "flow_shift": "12",
-        "seed": "1101",
-        "aspect_ratio": "16:9",
-        "quality": "lossless",
-        "extra_params": "{\"task\":\"t2va\",\"duration\":15,\"audio_flow_shift\":3.0}"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "timer": "perf_counter around local curl POST until complete MP4 saved; probe/decode/hash outside timed region",
-        "clock_policy": "node-default/unlocked",
-        "profiler": false,
-        "minimum_memory_mib": 65147
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-bf16-fi",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        52.459026,
-        52.645485,
-        52.545642
-      ],
-      "median_s": 52.545642,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          52.459026,
-          52.645485,
-          52.545642
-        ],
-        "median_s": 52.545642,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/results/BF16/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-qad-fi",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        31.787811,
-        31.820587,
-        32.022046
-      ],
-      "median_s": 31.820587,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          31.787811,
-          31.820587,
-          32.022046
-        ],
-        "median_s": 31.820587,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/results/B/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-qad-8l-fi",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        28.155216,
-        28.175902,
-        28.331615
-      ],
-      "median_s": 28.175902,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          28.155216,
-          28.175902,
-          28.331615
-        ],
-        "median_s": 28.175902,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/results/C/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-bf16-cudnn",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        52.600952,
-        52.573709,
-        52.555554
-      ],
-      "median_s": 52.573709,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          52.600952,
-          52.573709,
-          52.555554
-        ],
-        "median_s": 52.573709,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/bf16-cudnn/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-bf16-triton",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        60.643493,
-        60.577396,
-        60.635797
-      ],
-      "median_s": 60.635797,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          60.643493,
-          60.577396,
-          60.635797
-        ],
-        "median_s": 60.635797,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/bf16-fastvideo/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-qad-cudnn",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        31.762435,
-        31.803127,
-        31.822276
-      ],
-      "median_s": 31.803127,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          31.762435,
-          31.803127,
-          31.822276
-        ],
-        "median_s": 31.803127,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/checkpoint-cudnn/B/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-8step-qad-8l-cudnn",
-      "family": "omni5",
-      "gpu_count": 4,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 8,
-      "samples_s": [
-        28.200518,
-        28.358301,
-        28.287497
-      ],
-      "median_s": 28.287497,
-      "n": 3,
-      "historical": {
-        "samples_s": [
-          28.200518,
-          28.358301,
-          28.287497
-        ],
-        "median_s": 28.287497,
-        "timer": "curl time_total, excludes Python process overhead",
-        "evidence": "pro5000-4gpu-perf-20261021/checkpoint-cudnn/C/manifest.json",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "A family enjoys dinner together around a wooden table. Steam rises from the ramen bowls. They smile and talk naturally. The camera slowly pushes toward the table. Warm indoor lighting, quiet conversation, soft clinking of dishes.",
-        "size": "1344x768",
-        "seconds": "5",
-        "seed": "1234"
-      },
-      "protocol": {
-        "warmups": 1,
-        "repeats": 3,
-        "concurrency": 1,
-        "profiler": true,
-        "clock_policy": "node-default/unlocked",
-        "minimum_memory_mib": 61000
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-t2va-4step-all-mxfp8",
-      "family": "t2va5",
-      "gpu_count": 8,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 4,
-      "samples_s": [
-        4.668449042132124,
-        4.667934790952131,
-        4.6809148490428925,
-        4.68076366209425,
-        4.69352346402593
-      ],
-      "median_s": 4.68076366209425,
-      "n": 5,
-      "historical": {
-        "date": "2026-09-23",
-        "samples_s": [
-          4.668449042132124,
-          4.667934790952131,
-          4.6809148490428925,
-          4.68076366209425,
-          4.69352346402593
-        ],
-        "median_s": 4.68076366209425,
-        "source_url": "https://lishunyang12.github.io/fasth3-lossy-ablation/five-second.html",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "integrated_multimodal_description: [Shot 1] Cinematic live-action fantasy inside a small wooden teahouse suspended beneath a colossal moon, shown in a symmetrical wide shot through open paper doors. An elderly tea master in an indigo robe, with silver hair pinned high and a warm gravelly Mandarin voice (S1), pours glowing tea into two porcelain cups while a young female radio astronomer in a cream flight suit, with a clear fast Mandarin voice (S2), adjusts a brass receiver beside her. The camera pushes in with small amplitude at slow speed as lunar dust drifts upward instead of falling, and the tea master says: <d>[Chinese] 月亮不是沉默，只是等我们听见。</d> [Shot 2] At 00:03.400, the camera cuts to a macro close-up of the tea surface. Concentric ripples become a precise star map, tiny points of light connect across the cup, and the receiver needle snaps toward a distant signal. The astronomer leans into the eyepiece, her face illuminated by moving constellations, and replies: <d>[Chinese] 信号锁定了。</d> [Shot 3] At 00:06.600, the shot cuts outside to a sweeping arc around the teahouse as the vast moon slowly opens into layered mechanical petals, revealing a luminous blue core. The two women step onto the balcony without changing clothes or positions relative to each other; the tea master raises her cup while the astronomer sends one narrow beam from the receiver into the core. The camera pulls out with large amplitude at slow speed until the teahouse becomes a warm point against the unfolding lunar structure.\noverall_soundscape: Porcelain touches wood with delicate clicks above the soft hiss of boiling water and the papery flutter of the doors. A low receiver hum gains harmonics as the signal locks, followed by distant metal plates shifting across the moon and a soft pressure wave moving through airborne dust.\nnon_diegetic_music: Slow guzheng harmonics over sustained glassy synthesizer tones at 68 BPM. A restrained taiko pulse enters when the lunar petals open, then resolves into one long bowed-cymbal shimmer.",
-        "width": "1344",
-        "height": "768",
-        "fps": "24",
-        "num_inference_steps": "4",
-        "flow_shift": "12",
-        "seed": "1101",
-        "aspect_ratio": "16:9",
-        "quality": "lossless",
-        "extra_params": "{\"task\": \"t2va\", \"duration\": 5, \"audio_flow_shift\": 3.0}"
-      },
-      "protocol": {
-        "warmups": 2,
-        "repeats": 5,
-        "concurrency": 1,
-        "minimum_memory_mib": 65147
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
-    },
-    {
-      "id": "5s-t2va-4step-first-step-bf16",
-      "family": "t2va5",
-      "gpu_count": 8,
-      "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-      "width": 1344,
-      "height": 768,
-      "frames": 124,
-      "duration_seconds": 5.166666666666667,
-      "steps": 4,
-      "samples_s": [
-        5.205809125909582,
-        5.209279254078865,
-        5.220295866951346,
-        5.25953430403024,
-        5.2396815901156515
-      ],
-      "median_s": 5.220295866951346,
-      "n": 5,
-      "historical": {
-        "date": "2026-09-23",
-        "samples_s": [
-          5.205809125909582,
-          5.209279254078865,
-          5.220295866951346,
-          5.25953430403024,
-          5.2396815901156515
-        ],
-        "median_s": 5.220295866951346,
-        "source_url": "https://lishunyang12.github.io/fasth3-lossy-ablation/five-second.html",
-        "new_harness_rerun_required_for_strict_comparison": true
-      },
-      "request": {
-        "prompt": "integrated_multimodal_description: [Shot 1] Cinematic live-action fantasy inside a small wooden teahouse suspended beneath a colossal moon, shown in a symmetrical wide shot through open paper doors. An elderly tea master in an indigo robe, with silver hair pinned high and a warm gravelly Mandarin voice (S1), pours glowing tea into two porcelain cups while a young female radio astronomer in a cream flight suit, with a clear fast Mandarin voice (S2), adjusts a brass receiver beside her. The camera pushes in with small amplitude at slow speed as lunar dust drifts upward instead of falling, and the tea master says: <d>[Chinese] 月亮不是沉默，只是等我们听见。</d> [Shot 2] At 00:03.400, the camera cuts to a macro close-up of the tea surface. Concentric ripples become a precise star map, tiny points of light connect across the cup, and the receiver needle snaps toward a distant signal. The astronomer leans into the eyepiece, her face illuminated by moving constellations, and replies: <d>[Chinese] 信号锁定了。</d> [Shot 3] At 00:06.600, the shot cuts outside to a sweeping arc around the teahouse as the vast moon slowly opens into layered mechanical petals, revealing a luminous blue core. The two women step onto the balcony without changing clothes or positions relative to each other; the tea master raises her cup while the astronomer sends one narrow beam from the receiver into the core. The camera pulls out with large amplitude at slow speed until the teahouse becomes a warm point against the unfolding lunar structure.\noverall_soundscape: Porcelain touches wood with delicate clicks above the soft hiss of boiling water and the papery flutter of the doors. A low receiver hum gains harmonics as the signal locks, followed by distant metal plates shifting across the moon and a soft pressure wave moving through airborne dust.\nnon_diegetic_music: Slow guzheng harmonics over sustained glassy synthesizer tones at 68 BPM. A restrained taiko pulse enters when the lunar petals open, then resolves into one long bowed-cymbal shimmer.",
-        "width": "1344",
-        "height": "768",
-        "fps": "24",
-        "num_inference_steps": "4",
-        "flow_shift": "12",
-        "seed": "1101",
-        "aspect_ratio": "16:9",
-        "quality": "lossless",
-        "extra_params": "{\"task\": \"t2va\", \"duration\": 5, \"audio_flow_shift\": 3.0}"
-      },
-      "protocol": {
-        "warmups": 2,
-        "repeats": 5,
-        "concurrency": 1,
-        "minimum_memory_mib": 65147
-      },
-      "reproduction_status": "packaged; fresh GPU rerun pending",
-      "source_commit": "428123a8ca3d334b6a0339f6ead834f8c1093a5d"
+      "source_commit": "0648c559d2973eade1f6c4bee531bc73ed92538a"
     }
   ]
 }
