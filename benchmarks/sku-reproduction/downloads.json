@@ -1,0 +1,30 @@
+{
+  "omni5-history-inventory.json": {
+    "bytes": 11194,
+    "sha256": "dd300eda7050e2a487d6f5583f00d0c52be961da6f67b41bf51a0c234d73faec"
+  },
+  "h3-5s-15s-reproduction.zip": {
+    "bytes": 63823479,
+    "sha256": "59cf05c984ffc5cef8a961aeed0b92f3f3fe3191872a05f50506229bb5fe37aa"
+  },
+  "validation.json": {
+    "bytes": 1593,
+    "sha256": "4e1601f3925b01e2fb20ccc7f33872717fefcf83ca38b807a9470a7ae4ed871b"
+  },
+  "report-cjk.woff": {
+    "bytes": 124208,
+    "sha256": "e29d05378213be5be38295237c7ea9eb7a869ce6e43ebc803a92129f8746f015"
+  },
+  "timings.csv": {
+    "bytes": 6861,
+    "sha256": "ea07e4b3b27ee4a4d6a5d7c6f3b1b278f09f4173d2275160dfd8fc0da50f7b86"
+  },
+  "avatar5-history.json": {
+    "bytes": 6520,
+    "sha256": "31bd3c22359f1d48f6e23c3b314d863c1d917ddc294062653058a2f200329fdf"
+  },
+  "results.json": {
+    "bytes": 32606,
+    "sha256": "5b659a3e7b0105ca642ebe4c4554fd81e400217243ca7a6df9d930428b4c93a5"
+  }
+}
